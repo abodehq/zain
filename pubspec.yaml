@@ -41,11 +41,11 @@ flutter:
   fonts:
     - family: zain
       fonts:
-        - asset: fonts/zj-light.ttf
+        - asset: lib/fonts/zj-light.ttf
           weight: 300
-        - asset: fonts/zj-regular.ttf
+        - asset: lib/fonts/zj-regular.ttf
           weight: 400
-        - asset: fonts/zj-bold.ttf
+        - asset: lib/fonts/zj-bold.ttf
           weight: 700
 
   # For details regarding fonts in packages, see
