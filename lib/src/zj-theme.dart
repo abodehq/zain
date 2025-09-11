@@ -6,7 +6,7 @@ class ZjTheme {
     brightness: Brightness.light,
     primaryColor: ZjColors.primary,
     scaffoldBackgroundColor: ZjColors.white,
-    fontFamily: "Zain",
+    fontFamily: "zain",
     textTheme: const TextTheme(
       bodyLarge: TextStyle(fontWeight: FontWeight.w400),
       bodyMedium: TextStyle(fontWeight: FontWeight.w400),
