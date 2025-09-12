@@ -57,7 +57,7 @@ class ZjTextVars {
   );
 }
 
-import 'package:flutter/material.dart';
+
 
 /// ========= Semantic Styles =========
 class ZjTextStyles {
@@ -72,25 +72,37 @@ class ZjTextStyles {
   static const TextStyle caption = TextStyle(fontSize: 24, fontWeight: FontWeight.w300);
 }
 
+import 'package:flutter/material.dart';
+
 /// ========= Components extending Text =========
 class H1 extends Text {
   H1(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h1).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
 
@@ -98,42 +110,61 @@ class H2 extends Text {
   H2(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h2).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
 
-// Similarly for H3..H6
 class H3 extends Text {
   H3(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h3).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
 
@@ -141,20 +172,30 @@ class H4 extends Text {
   H4(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h4).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
 
@@ -162,20 +203,30 @@ class H5 extends Text {
   H5(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h5).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
 
@@ -183,19 +234,29 @@ class H6 extends Text {
   H6(
       super.data, {
         super.key,
-        super.style,
-        super.textAlign,
-        super.overflow,
-        super.maxLines,
-        super.softWrap,
-        super.textScaleFactor,
-        super.locale,
-        super.strutStyle,
-        super.textWidthBasis,
-        super.textHeightBehavior,
-        super.selectionColor,
         Color? color,
+        TextStyle? style,
+        TextAlign? textAlign,
+        int? maxLines,
+        TextOverflow? overflow,
+        bool? softWrap,
+        double? textScaleFactor,
+        Locale? locale,
+        StrutStyle? strutStyle,
+        TextWidthBasis? textWidthBasis,
+        TextHeightBehavior? textHeightBehavior,
+        Color? selectionColor,
       }) : super(
     style: (style ?? ZjTextStyles.h6).copyWith(color: color),
+    textAlign: textAlign,
+    maxLines: maxLines,
+    overflow: overflow,
+    softWrap: softWrap,
+    textScaleFactor: textScaleFactor,
+    locale: locale,
+    strutStyle: strutStyle,
+    textWidthBasis: textWidthBasis,
+    textHeightBehavior: textHeightBehavior,
+    selectionColor: selectionColor,
   );
 }
