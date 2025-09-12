@@ -72,7 +72,6 @@ class ZjTextStyles {
   static const TextStyle caption = TextStyle(fontSize: 24, fontWeight: FontWeight.w300);
 }
 
-import 'package:flutter/material.dart';
 
 /// ========= Components extending Text =========
 class H1 extends Text {
