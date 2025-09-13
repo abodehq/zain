@@ -6,6 +6,10 @@ class ZjTextVars {
   static const double s36 = 36.0;
   static const double s32 = 32.0;
   static const double s24 = 24.0;
+  static const double s20 = 20.0;
+  static const double s18 = 18.0;
+  static const double s16 = 16.0;
+  static const double s14 = 14.0;
 
   // Font weights
   static const FontWeight light = FontWeight.w300;
@@ -53,6 +57,71 @@ class ZjTextVars {
 
   static const TextStyle txtBold24 = TextStyle(
     fontSize: s24,
+    fontWeight: bold,
+  );
+
+  static const TextStyle txt20 = TextStyle(
+    fontSize: s20,
+    fontWeight: regular,
+  );
+
+  static const TextStyle txtBold20 = TextStyle(
+    fontSize: s20,
+    fontWeight: bold,
+  );
+
+  static const TextStyle txt18 = TextStyle(
+    fontSize: s18,
+    fontWeight: regular,
+  );
+
+  static const TextStyle txtBold18 = TextStyle(
+    fontSize: s18,
+    fontWeight: bold,
+  );
+
+  static const TextStyle txtLight16 = TextStyle(
+    fontSize: s16,
+    fontWeight: light,
+  );
+
+  static const TextStyle txt16 = TextStyle(
+    fontSize: s16,
+    fontWeight: regular,
+  );
+
+  static const TextStyle txtBold16 = TextStyle(
+    fontSize: s16,
+    fontWeight: bold,
+  );
+
+  static const TextStyle txtLight14 = TextStyle(
+    fontSize: s14,
+    fontWeight: light,
+  );
+
+  static const TextStyle txt14 = TextStyle(
+    fontSize: s14,
+    fontWeight: regular,
+  );
+
+  static const TextStyle txtBold14 = TextStyle(
+    fontSize: s14,
+    fontWeight: bold,
+  );
+
+  static const TextStyle txtLight12 = TextStyle(
+    fontSize: s12,
+    fontWeight: light,
+  );
+
+  static const TextStyle txt12 = TextStyle(
+    fontSize: s12,
+    fontWeight: regular,
+  );
+
+  static const TextStyle txtBold12 = TextStyle(
+    fontSize: s12,
     fontWeight: bold,
   );
 }
