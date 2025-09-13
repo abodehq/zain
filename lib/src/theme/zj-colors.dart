@@ -50,6 +50,7 @@ class ZjColors {
   static const Color black87 = Color(0xDE000000);
   static const Color black70 = Color(0xB3000000);
   static const Color black54 = Color(0x8A000000);
+  static const Color black30 = Color(0x4D000000);
   static const Color black24 = Color(0x3D000000);
   static const Color black16 = Color(0x29000000);
   static const Color black12 = Color(0x1F000000);
@@ -62,7 +63,8 @@ class ZjColors {
   static const Color white87 = Color(0xDEFFFFFF);
   static const Color white70 = Color(0xB3FFFFFF);
   static const Color white54 = Color(0x8AFFFFFF);
-  static const Color white24 = Color(0x3DFFFFFF);
+  static const Color white30 = Color(0x3DFFFFFF);
+  static const Color white24 = Color(0x4DFFFFFF);
   static const Color white16 = Color(0x29FFFFFF);
   static const Color white12 = Color(0x1FFFFFFF);
   static const Color white8  = Color(0x14FFFFFF);
