@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'zj-colors.dart';
 import 'zj-text.dart';
+import 'zj-units.dart';
 
 class ZjButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -35,10 +36,10 @@ class ZjButton extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: isEnabled ? backgroundColor : disabledBackgroundColor,
         foregroundColor: isEnabled ? textColor : disabledTextColor,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
-        minimumSize: const Size(0, 40),
+        padding: const EdgeInsets.symmetric(horizontal: ZjUnits.unit24, vertical: ZjUnits.unit10),
+        minimumSize: const Size(ZjUnits.unit0, ZjUnits.unit40),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(ZjUnits.rxl),
         ),
         textStyle:ZjTextVars.txtBold14.copyWith(
           color: isEnabled ? textColor : disabledTextColor,
@@ -55,8 +56,8 @@ class ZjButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (icon != null) ...[
-            Icon(icon, size: 20, color: isEnabled ? textColor : disabledTextColor),
-            const SizedBox(width: 8),
+            Icon(icon, size: ZjUnits.unit18, color: isEnabled ? textColor : disabledTextColor),
+            const SizedBox(width: ZjUnits.unit4),
           ],
           Text(
             label,
@@ -101,7 +102,7 @@ class ZjPrimaryButton extends StatelessWidget {
   }
 }
 
-class SecondaryButton extends StatelessWidget {
+class ZjSecondaryButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final IconData? icon;
