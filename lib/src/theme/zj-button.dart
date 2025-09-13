@@ -14,10 +14,10 @@ class ZjButton extends StatelessWidget {
 
   const ZjButton({
     Key? key,
-    required this.label = "Button",
+    this.label = "Button",
     required this.onPressed,
-    required this.backgroundColor = ZjColors.primary,
-    required this.textColor = ZjColors.txtPrimaryWhite,
+    this.backgroundColor = ZjColors.primary,
+    this.textColor = ZjColors.txtPrimaryWhite,
     this.icon,
     this.disabledBackgroundColor = ZjColors.black12,
     this.disabledTextColor = ZjColors.black30,
