@@ -68,4 +68,14 @@ class ZjColors {
   static const Color white8  = Color(0x14FFFFFF);
   static const Color white5  = Color(0x0DFFFFFF);
   static const Color white2  = Color(0x05FFFFFF);
+
+  static const Color txtBrandPrimary = primary;
+  static const Color txtBrandSecondary = secondary;
+  static const Color txtBrandThird = third;
+  static const Color txtPrimaryBlack = black87;
+  static const Color txtSecondaryBlack = black70;
+  static const Color txtPrimaryWhite = white;
+  static const Color txtSecondaryWhite = white70;
+
+  static const Color borderPrimary = black8;
 }

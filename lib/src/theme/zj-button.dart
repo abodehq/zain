@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'zj-colors.dart';
+import 'zj-text.dart';
 
 class ZjButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -37,12 +38,15 @@ class ZjButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        textStyle: TextStyle(
-          fontFamily: 'zain',
-          fontSize: 14,
-          fontWeight: FontWeight.w700,
+        textStyle:ZjTextVars.txtBold14.copyWith(
           color: isEnabled ? textColor : disabledTextColor,
         ),
+        // textStyle: TextStyle(
+        //   fontFamily: 'zain',
+        //   fontSize: 14,
+        //   fontWeight: FontWeight.w700,
+        //   color: isEnabled ? textColor : disabledTextColor,
+        // ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -88,7 +92,7 @@ class PrimaryButton extends StatelessWidget {
       icon: icon,
       isDisabled: isDisabled,
       backgroundColor: ZjColors.primary, // brand color
-      textColor: Colors.white,
+      textColor: ZjColors.txtPrimaryWhite,
     );
   }
 }
@@ -115,7 +119,7 @@ class SecondaryButton extends StatelessWidget {
       icon: icon,
       isDisabled: isDisabled,
       backgroundColor: ZjColors.secondary,
-      textColor: const Color(0xFF00009E), // brand primary as text
+      textColor: ZjColors.txtPrimaryWhite, // brand primary as text
     );
   }
 }
