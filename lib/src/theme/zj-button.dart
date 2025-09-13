@@ -108,7 +108,7 @@ class ZjSecondaryButton extends StatelessWidget {
   final IconData? icon;
   final bool isDisabled;
 
-  const SecondaryButton({
+  const ZjSecondaryButton({
     Key? key,
     required this.label,
     required this.onPressed,
