@@ -14,13 +14,13 @@ class ZjButton extends StatelessWidget {
 
   const ZjButton({
     Key? key,
-    required this.label,
+    required this.label = "Button",
     required this.onPressed,
-    required this.backgroundColor,
-    required this.textColor,
+    required this.backgroundColor = ZjColors.primary,
+    required this.textColor = ZjColors.txtPrimaryWhite,
     this.icon,
-    this.disabledBackgroundColor = const Color(0xFFE0E0E0),
-    this.disabledTextColor = const Color(0xFF9E9E9E),
+    this.disabledBackgroundColor = ZjColors.black12,
+    this.disabledTextColor = ZjColors.black30,
     this.isDisabled = false,
   }) : super(key: key);
 
@@ -31,6 +31,7 @@ class ZjButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
+        elevation:0,
         backgroundColor: isEnabled ? backgroundColor : disabledBackgroundColor,
         foregroundColor: isEnabled ? textColor : disabledTextColor,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
@@ -70,13 +71,13 @@ class ZjButton extends StatelessWidget {
 }
 
 
-class PrimaryButton extends StatelessWidget {
+class ZjPrimaryButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final IconData? icon;
   final bool isDisabled;
 
-  const PrimaryButton({
+  const ZjPrimaryButton({
     Key? key,
     required this.label,
     required this.onPressed,
@@ -90,9 +91,11 @@ class PrimaryButton extends StatelessWidget {
       label: label,
       onPressed: onPressed,
       icon: icon,
-      isDisabled: isDisabled,
       backgroundColor: ZjColors.primary, // brand color
       textColor: ZjColors.txtPrimaryWhite,
+      isDisabled: isDisabled,
+      disabledBackgroundColor : ZjColors.black12,
+      disabledTextColor : ZjColors.black30,
     );
   }
 }
@@ -117,9 +120,11 @@ class SecondaryButton extends StatelessWidget {
       label: label,
       onPressed: onPressed,
       icon: icon,
-      isDisabled: isDisabled,
       backgroundColor: ZjColors.secondary,
-      textColor: ZjColors.txtPrimaryWhite, // brand primary as text
+      textColor: ZjColors.txtPrimaryWhite,
+      isDisabled: isDisabled,
+      disabledBackgroundColor : ZjColors.black12,
+      disabledTextColor : ZjColors.black30,
     );
   }
 }
