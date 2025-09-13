@@ -31,7 +31,8 @@ class ZjButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
-        elevation:MaterialStateProperty.all<double>(0.0),
+        shadowColor: Colors.transparent,
+        elevation: 0.0,
         backgroundColor: isEnabled ? backgroundColor : disabledBackgroundColor,
         foregroundColor: isEnabled ? textColor : disabledTextColor,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
