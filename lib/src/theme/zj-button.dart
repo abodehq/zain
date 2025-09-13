@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'zj-colors.dart';
 
 class ZjButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -86,7 +87,7 @@ class PrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       icon: icon,
       isDisabled: isDisabled,
-      backgroundColor: const Color(0xFFAB1368), // brand color
+      backgroundColor: ZjColors.primary, // brand color
       textColor: Colors.white,
     );
   }
@@ -113,7 +114,7 @@ class SecondaryButton extends StatelessWidget {
       onPressed: onPressed,
       icon: icon,
       isDisabled: isDisabled,
-      backgroundColor: Colors.white,
+      backgroundColor: ZjColors.secondary,
       textColor: const Color(0xFF00009E), // brand primary as text
     );
   }
