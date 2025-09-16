@@ -162,9 +162,6 @@ class ZjIcons {
   static const IconData zainCash = IconData(0xE9a4, fontFamily: zjIconsFontFamily);
 }
 
-
-import 'package:flutter/widgets.dart';
-
 class ZjIcon extends StatelessWidget {
   final IconData? icon;
   final double? size;
