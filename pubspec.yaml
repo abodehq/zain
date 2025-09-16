@@ -47,6 +47,8 @@ flutter:
           weight: 400
         - asset: lib/fonts/zj-bold.ttf
           weight: 700
-
+    - family: zj-icons
+      fonts:
+        - asset: fonts/zj-icons.ttf
   # For details regarding fonts in packages, see
   # https://flutter.dev/to/font-from-package
