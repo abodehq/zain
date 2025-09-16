@@ -26,7 +26,7 @@ class ZjIcons {
   const IconData cashOnDelivery = IconData(0xE915, fontFamily: zjIconsFontFamily);
   const IconData chat = IconData(0xE916, fontFamily: zjIconsFontFamily);
   const IconData chatBot = IconData(0xE917, fontFamily: zjIconsFontFamily);
-  const IconData ChatInPopup = IconData(0xE918, fontFamily: zjIconsFontFamily);
+  const IconData chatInPopup = IconData(0xE918, fontFamily: zjIconsFontFamily);
   const IconData check = IconData(0xE919, fontFamily: zjIconsFontFamily);
   const IconData checkBox = IconData(0xE91a, fontFamily: zjIconsFontFamily);
   const IconData checkBoxUnchecked = IconData(0xE91c, fontFamily: zjIconsFontFamily);
@@ -61,9 +61,9 @@ class ZjIcons {
   const IconData starChecked = IconData(0xE939, fontFamily: zjIconsFontFamily);
   const IconData gameControl = IconData(0xE93a, fontFamily: zjIconsFontFamily);
   const IconData gift = IconData(0xE93b, fontFamily: zjIconsFontFamily);
-  const IconData visa = IconData(0xE93c, fontFamily: zjIconsFontFamily);
+  const IconData visaColored = IconData(0xE93c, fontFamily: zjIconsFontFamily);
   const IconData percentage = IconData(0xE941, fontFamily: zjIconsFontFamily);
-  const IconData masterCard = IconData(0xE942, fontFamily: zjIconsFontFamily);
+  const IconData masterCardColored = IconData(0xE942, fontFamily: zjIconsFontFamily);
   const IconData headphone = IconData(0xE946, fontFamily: zjIconsFontFamily);
   const IconData help = IconData(0xE947, fontFamily: zjIconsFontFamily);
   const IconData history = IconData(0xE948, fontFamily: zjIconsFontFamily);
@@ -78,11 +78,11 @@ class ZjIcons {
   const IconData laptop = IconData(0xE951, fontFamily: zjIconsFontFamily);
   const IconData last10Calls = IconData(0xE952, fontFamily: zjIconsFontFamily);
   const IconData lastCalls = IconData(0xE953, fontFamily: zjIconsFontFamily);
-  const IconData instagram = IconData(0xE954, fontFamily: zjIconsFontFamily);
+  const IconData snapChat = IconData(0xE954, fontFamily: zjIconsFontFamily);
   const IconData leaderboard = IconData(0xE955, fontFamily: zjIconsFontFamily);
   const IconData like = IconData(0xE956, fontFamily: zjIconsFontFamily);
   const IconData linkedin = IconData(0xE957, fontFamily: zjIconsFontFamily);
-  const IconData List = IconData(0xE958, fontFamily: zjIconsFontFamily);
+  const IconData list = IconData(0xE958, fontFamily: zjIconsFontFamily);
   const IconData localOffer = IconData(0xE959, fontFamily: zjIconsFontFamily);
   const IconData shipping = IconData(0xE95a, fontFamily: zjIconsFontFamily);
   const IconData locationMark = IconData(0xE95b, fontFamily: zjIconsFontFamily);
@@ -96,7 +96,7 @@ class ZjIcons {
   const IconData moneyTransfer = IconData(0xE963, fontFamily: zjIconsFontFamily);
   const IconData dollarSign = IconData(0xE964, fontFamily: zjIconsFontFamily);
   const IconData questionMark = IconData(0xE965, fontFamily: zjIconsFontFamily);
-  const IconData calendar = IconData(0xE966, fontFamily: zjIconsFontFamily);
+  const IconData calendarMonth = IconData(0xE966, fontFamily: zjIconsFontFamily);
   const IconData statistics = IconData(0xE967, fontFamily: zjIconsFontFamily);
   const IconData moreDown = IconData(0xE969, fontFamily: zjIconsFontFamily);
   const IconData moreLeft = IconData(0xE96a, fontFamily: zjIconsFontFamily);
@@ -137,8 +137,6 @@ class ZjIcons {
   const IconData smartPhoneMoney = IconData(0xE98d, fontFamily: zjIconsFontFamily);
   const IconData software = IconData(0xE98e, fontFamily: zjIconsFontFamily);
   const IconData sort = IconData(0xE98f, fontFamily: zjIconsFontFamily);
-  const IconData stop = IconData(0xE990, fontFamily: zjIconsFontFamily);
-  const IconData stop = IconData(0xE990, fontFamily: zjIconsFontFamily);
   const IconData stop = IconData(0xE990, fontFamily: zjIconsFontFamily);
   const IconData storage = IconData(0xE991, fontFamily: zjIconsFontFamily);
   const IconData tablet = IconData(0xE992, fontFamily: zjIconsFontFamily);
