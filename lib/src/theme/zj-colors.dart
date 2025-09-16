@@ -80,4 +80,5 @@ class ZjColors {
   static const Color txtSecondaryWhite = white70;
 
   static const Color borderPrimary = black8;
+  static const Color icon = black;
 }

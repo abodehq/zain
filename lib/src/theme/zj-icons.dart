@@ -160,3 +160,38 @@ class ZjIcons {
   static const IconData zain = IconData(0xE9a3, fontFamily: zjIconsFontFamily);
   static const IconData zainCash = IconData(0xE9a4, fontFamily: zjIconsFontFamily);
 }
+
+
+import 'package:flutter/widgets.dart';
+
+class ZjIcon extends StatelessWidget {
+  final IconData? icon;
+  final double? size;
+  final Color? color;
+  final String? semanticLabel;
+  final TextDirection? textDirection;
+  final double? fill;
+
+  const ZjIcon(
+      this.icon, {
+        super.key,
+        this.size,
+        this.color,
+        this.semanticLabel,
+        this.textDirection,
+        this.fill,
+
+      });
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      icon,
+      size: size ?? ZjUnits.unit24,
+      color: color ?? ZjColors.icon,
+      semanticLabel: semanticLabel,
+      textDirection: textDirection,
+      fill: fill
+    );
+  }
+}
