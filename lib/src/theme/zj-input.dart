@@ -81,3 +81,86 @@ class ZjInput extends StatelessWidget {
     );
   }
 }
+
+
+
+
+class ZjPhoneInput extends StatelessWidget {
+  final TextEditingController controller;
+  final String hintText;
+
+  const ZjPhoneInput({
+    Key? key,
+    required this.controller,
+    this.hintText = "Enter phone number",
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ZjInput(
+      controller: controller,
+      hintText: hintText,
+      startIcon: Icons.phone,
+      keyboardType: TextInputType.phone,
+    );
+  }
+}
+
+
+class ZjPhoneInput extends StatelessWidget {
+  final TextEditingController controller;
+  final String hintText;
+
+  const ZjPhoneInput({
+    Key? key,
+    required this.controller,
+    this.hintText = "Enter phone number",
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ZjInput(
+      controller: controller,
+      hintText: hintText,
+      startIcon: Icons.phone,
+      keyboardType: TextInputType.phone,
+    );
+  }
+}
+
+
+class ZjPasswordInput extends StatefulWidget {
+  final TextEditingController controller;
+  final String hintText;
+
+  const ZjPasswordInput({
+    Key? key,
+    required this.controller,
+    this.hintText = "Enter password",
+  }) : super(key: key);
+
+  @override
+  State<ZjPasswordInput> createState() => _ZjPasswordInputState();
+}
+
+class _ZjPasswordInputState extends State<ZjPasswordInput> {
+  bool _obscureText = true;
+
+  void _toggleObscure() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ZjInput(
+      controller: widget.controller,
+      hintText: widget.hintText,
+      startIcon: Icons.lock,
+      obscureText: _obscureText,
+      endIcon: _obscureText ? Icons.visibility : Icons.visibility_off,
+      onEndIconPressed: _toggleObscure,
+    );
+  }
+}
