@@ -84,28 +84,32 @@ class ZjInput extends StatelessWidget {
 
 
 
-
-class ZjPhoneInput extends StatelessWidget {
+class ZjEmailInput extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
 
-  const ZjPhoneInput({
+  const ZjEmailInput({
     Key? key,
     required this.controller,
-    this.hintText = "Enter phone number",
+    this.hintText = "Enter your email",
   }) : super(key: key);
+
+  bool _isValidEmail(String value) {
+    final regex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+    return regex.hasMatch(value);
+  }
 
   @override
   Widget build(BuildContext context) {
     return ZjInput(
       controller: controller,
       hintText: hintText,
-      startIcon: Icons.phone,
-      keyboardType: TextInputType.phone,
+      startIcon: Icons.email,
+      keyboardType: TextInputType.emailAddress,
+      endIcon: _isValidEmail(controller.text) ? Icons.check_circle : null,
     );
   }
 }
-
 
 class ZjPhoneInput extends StatelessWidget {
   final TextEditingController controller;
