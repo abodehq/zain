@@ -100,6 +100,38 @@ class ZjPhoneInput extends StatelessWidget {
 }
 
 /// Password Input with toggle
+// class ZjPasswordInput extends StatefulWidget {
+//   final TextEditingController? controller;
+//
+//   const ZjPasswordInput({super.key, this.controller});
+//
+//   @override
+//   State<ZjPasswordInput> createState() => _ZjPasswordInputState();
+// }
+//
+// class _ZjPasswordInputState extends State<ZjPasswordInput> {
+//   bool _obscureText = true;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return ZjInput(
+//       controller: widget.controller,
+//       hintText: "Password",
+//       startIcon: Icons.lock,
+//       obscureText: _obscureText,
+//       endIcon: _obscureText ? Icons.visibility : Icons.visibility_off,
+//       onEndIconPressed: () {
+//         setState(() {
+//           _obscureText = !_obscureText;
+//         });
+//       },
+//       validator: ZjValidator.password,
+//     );
+//   }
+// }
+//
+
+
 class ZjPasswordInput extends StatefulWidget {
   final TextEditingController? controller;
 
@@ -110,22 +142,29 @@ class ZjPasswordInput extends StatefulWidget {
 }
 
 class _ZjPasswordInputState extends State<ZjPasswordInput> {
-  bool _obscureText = true;
+  final ValueNotifier<bool> _obscureText = ValueNotifier(true);
+
+  @override
+  void dispose() {
+    _obscureText.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return ZjInput(
-      controller: widget.controller,
-      hintText: "Password",
-      startIcon: Icons.lock,
-      obscureText: _obscureText,
-      endIcon: _obscureText ? Icons.visibility : Icons.visibility_off,
-      onEndIconPressed: () {
-        setState(() {
-          _obscureText = !_obscureText;
-        });
+    return ValueListenableBuilder<bool>(
+      valueListenable: _obscureText,
+      builder: (context, obscure, _) {
+        return ZjInput(
+          controller: widget.controller,
+          hintText: "Password",
+          startIcon: Icons.lock,
+          obscureText: obscure,
+          endIcon: obscure ? Icons.visibility : Icons.visibility_off,
+          onEndIconPressed: () => _obscureText.value = !obscure,
+          validator: ZjValidator.password,
+        );
       },
-      validator: ZjValidator.password,
     );
   }
 }
