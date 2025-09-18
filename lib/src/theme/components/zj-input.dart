@@ -4,6 +4,7 @@ import '../core/zj-colors.dart';
 import '../core/zj-units.dart';
 import '../validators/zj-validators.dart';
 import 'zj-text.dart';
+import 'zj-icons.dart';
 
 
 
@@ -92,7 +93,7 @@ class ZjPhoneInput extends StatelessWidget {
     return ZjInput(
       controller: controller,
       hintText: "Phone number",
-      startIcon: Icons.phone,
+      startIcon: ZjIcons.email,
       keyboardType: TextInputType.phone,
       textInputAction: TextInputAction.next,
       validator: ZjValidator.phone,
