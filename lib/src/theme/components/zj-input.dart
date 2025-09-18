@@ -17,7 +17,7 @@ class ZjInput extends StatelessWidget {
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
-
+  final List<TextInputFormatter>? inputFormatters;
   const ZjInput({
     super.key,
     this.hintText,
@@ -28,6 +28,7 @@ class ZjInput extends StatelessWidget {
     this.controller,
     this.keyboardType,
     this.validator,
+    this.inputFormatters,
   });
 
   @override
@@ -37,6 +38,7 @@ class ZjInput extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       validator: validator,
+      inputFormatters: inputFormatters,
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: startIcon != null
