@@ -17,6 +17,7 @@ class ZjInput extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
+  final TextInputAction? textInputAction;
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
 
@@ -38,6 +39,7 @@ class ZjInput extends StatelessWidget {
     return TextFormField(
       controller: controller,
       keyboardType: keyboardType,
+      textInputAction: textInputAction,
       obscureText: obscureText,
       validator: validator,
       inputFormatters: inputFormatters,
@@ -72,6 +74,7 @@ class ZjEmailInput extends StatelessWidget {
       hintText: "Email",
       startIcon: Icons.email,
       keyboardType: TextInputType.emailAddress,
+      textInputAction: TextInputAction.next,
       validator: ZjValidator.email,
     );
   }
@@ -90,6 +93,7 @@ class ZjPhoneInput extends StatelessWidget {
       hintText: "Phone number",
       startIcon: Icons.phone,
       keyboardType: TextInputType.phone,
+      textInputAction: TextInputAction.next,
       validator: ZjValidator.phone,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly, // only numbers allowed
@@ -157,6 +161,7 @@ class _ZjPasswordInputState extends State<ZjPasswordInput> {
       builder: (context, obscure, _) {
         return ZjInput(
           controller: widget.controller,
+          textInputAction: TextInputAction.next,
           hintText: "Password",
           startIcon: Icons.lock,
           obscureText: obscure,
