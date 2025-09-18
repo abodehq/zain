@@ -63,7 +63,7 @@ class ZjTheme {
       ),
     ),
     iconTheme: const IconThemeData(
-      color: ZjColors.black, // Light theme icon color
+      color: ZjColors.black54, // Light theme icon color
       size:24,
     ),
 
@@ -106,7 +106,7 @@ class ZjTheme {
       ),
     ),
     iconTheme: const IconThemeData(
-      color: ZjColors.white, // Light theme icon color
+      color: ZjColors.white54, // Light theme icon color
       size:24,
     ),
     inputDecorationTheme: InputDecorationTheme(
