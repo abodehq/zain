@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'theme/zj-units.dart';
-import 'theme/zj-colors.dart';
-import 'theme/zj-icons.dart';
-import 'theme/zj-text.dart';
-import 'theme/zj-button.dart';
-import 'theme/zj-input.dart';
+import 'theme/core/zj-units.dart';
+import 'theme/core/zj-colors.dart';
+import 'theme/components/zj-icons.dart';
+import 'theme/components/zj-text.dart';
+import 'theme/components/zj-button.dart';
+import 'theme/components/zj-input.dart';
 
 class ZjTheme {
   static ThemeData get light => ThemeData(
