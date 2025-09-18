@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './core/zj-colors.dart';
-import './core/zj-units.dart';
+import '../core/zj-colors.dart';
+import '../core/zj-units.dart';
 import 'zj-text.dart';
 
 
