@@ -186,7 +186,7 @@ class ZjIcon extends StatelessWidget {
     return Icon(
       icon,
       size: size ?? ZjUnits.unit24,
-      color: color ?? ZjColors.icon,
+      color: color ?? Theme.of(context).iconTheme.color,
       semanticLabel: semanticLabel,
       textDirection: textDirection,
       fill: fill

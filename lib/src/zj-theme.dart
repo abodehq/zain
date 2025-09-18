@@ -18,6 +18,9 @@ class ZjTheme {
       titleMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w600),
       headlineSmall: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w700),
     ),
+    iconTheme: const IconThemeData(
+      color: ZjColors.black, // Light theme icon color
+    ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: const Color.fromRGBO(35, 174, 183, 0.02),
@@ -65,7 +68,9 @@ class ZjTheme {
         fontWeight: FontWeight.w700,
       ),
     ),
-
+    iconTheme: const IconThemeData(
+      color: ZjColors.white, // Light theme icon color
+    ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: Colors.white10,
