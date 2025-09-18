@@ -48,7 +48,7 @@ class ZjInput extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: startIcon != null
-            ? Icon(startIcon,size: 44.0)
+            ? Icon(startIcon,size: 24.0)
             : null,
         suffixIcon: endIcon != null
             ? IconButton(
