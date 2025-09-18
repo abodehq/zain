@@ -13,11 +13,21 @@ class ZjTheme {
     scaffoldBackgroundColor: ZjColors.white,
     fontFamily: "zain",
     textTheme: const TextTheme(
-      bodyLarge: TextStyle(fontWeight: FontWeight.w400),
+      bodyLarge: TextStyle( fontSize: 14,color: Color.red,fontWeight: FontWeight.w400),
       bodyMedium: TextStyle(fontWeight: FontWeight.w400),
       titleMedium: TextStyle(fontWeight: FontWeight.w600),
       headlineSmall: TextStyle(fontWeight: FontWeight.w700),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: const Color.fromRGBO(35, 174, 183, 0.02),
+      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(color: Color.fromRGBO(0, 0, 0, 0.08)),
+      ),
+    ),
+
     colorScheme: ColorScheme.fromSeed(
       seedColor: ZjColors.primary,
       primary: ZjColors.primary,
