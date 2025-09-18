@@ -35,4 +35,54 @@ class ZjTheme {
       error: ZjColors.error,
     ),
   );
+
+  /// Dark Theme
+  static ThemeData get dark => ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: ZjColors.primary,
+    scaffoldBackgroundColor: ZjColors.black,
+    fontFamily: "zain",
+
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(
+        fontSize: 14,
+        color: ZjColors.white,
+        fontWeight: FontWeight.w400,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+        color: ZjColors.white,
+        fontWeight: FontWeight.w400,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 14,
+        color: ZjColors.white,
+        fontWeight: FontWeight.w600,
+      ),
+      headlineSmall: TextStyle(
+        fontSize: 14,
+        color: ZjColors.white,
+        fontWeight: FontWeight.w700,
+      ),
+    ),
+
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: Colors.white10,
+      contentPadding:
+      const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(color: Colors.white30),
+      ),
+    ),
+
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: ZjColors.primary,
+      brightness: Brightness.dark,
+      primary: ZjColors.primary,
+      secondary: ZjColors.secondary,
+      error: ZjColors.error,
+    ),
+  );
 }
