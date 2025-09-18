@@ -102,6 +102,10 @@ class ZjPhoneInput extends StatelessWidget {
       startIcon: Icons.phone,
       keyboardType: TextInputType.phone,
       validator: ZjValidator.phone,
+      inputFormatters: [
+        FilteringTextInputFormatter.digitsOnly, // ✅ only numbers allowed
+        LengthLimitingTextInputFormatter(15),   // optional: max length
+      ],
     );
   }
 }
