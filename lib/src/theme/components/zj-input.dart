@@ -84,7 +84,7 @@ class ZjEmailInput extends StatelessWidget {
       hintText: "Email",
       startIcon: Icons.email,
       keyboardType: TextInputType.emailAddress,
-      validator: ZjValidators.email,
+      validator: ZjValidator.email,
     );
   }
 }
@@ -101,7 +101,7 @@ class ZjPhoneInput extends StatelessWidget {
       hintText: "Phone number",
       startIcon: Icons.phone,
       keyboardType: TextInputType.phone,
-      validator: ZjValidators.phone,
+      validator: ZjValidator.phone,
     );
   }
 }
@@ -132,7 +132,7 @@ class _ZjPasswordInputState extends State<ZjPasswordInput> {
           _obscureText = !_obscureText;
         });
       },
-      validator: ZjValidators.password,
+      validator: ZjValidator.password,
     );
   }
 }
