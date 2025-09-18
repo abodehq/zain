@@ -28,6 +28,7 @@ class ZjInput extends StatelessWidget {
     this.endIcon,
     this.onEndIconPressed,
     this.obscureText = false,
+    this.textInputAction =TextInputAction.next,
     this.controller,
     this.keyboardType,
     this.validator,
