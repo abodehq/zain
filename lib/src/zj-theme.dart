@@ -12,24 +12,61 @@ class ZjTheme {
     primaryColor: ZjColors.primary,
     scaffoldBackgroundColor: ZjColors.white,
     fontFamily: "zain",
+    // textTheme: const TextTheme(
+    //   bodyLarge: TextStyle( fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
+    //   bodyMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
+    //   titleMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w600),
+    //   headlineSmall: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w700),
+    // ),
+    // Text styles for TextFormField
     textTheme: const TextTheme(
-      bodyLarge: TextStyle( fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
-      bodyMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
-      titleMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w600),
-      headlineSmall: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w700),
+      bodyLarge: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: Color.fromRGBO(0, 0, 0, 0.7), // matches text-secondary-black
+        height: 1.5, // line-height equivalent
+      ),
+    ),
+
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: const Color.fromRGBO(35, 174, 183, 0.02), // background
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: 10, // padding top/bottom
+        horizontal: 12, // padding left/right
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8), // border-radius
+        borderSide: const BorderSide(
+          color: Color.fromRGBO(0, 0, 0, 0.08), // border color
+          width: 1,
+        ),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: const BorderSide(
+          color: Color.fromRGBO(0, 0, 0, 0.08),
+          width: 1,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: ZjColors.primary, // change border on focus
+          width: 1.5,
+        ),
+      ),
+      hintStyle: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: Color.fromRGBO(0, 0, 0, 0.4), // lighter hint
+      ),
     ),
     iconTheme: const IconThemeData(
       color: ZjColors.black, // Light theme icon color
+      size:24,
     ),
-    inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: const Color.fromRGBO(35, 174, 183, 0.02),
-      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
-        borderSide: const BorderSide(color: Color.fromRGBO(0, 0, 0, 0.08)),
-      ),
-    ),
+
 
     colorScheme: ColorScheme.fromSeed(
       seedColor: ZjColors.primary,
@@ -70,6 +107,7 @@ class ZjTheme {
     ),
     iconTheme: const IconThemeData(
       color: ZjColors.white, // Light theme icon color
+      size:24,
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
