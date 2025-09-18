@@ -13,10 +13,10 @@ class ZjTheme {
     scaffoldBackgroundColor: ZjColors.white,
     fontFamily: "zain",
     textTheme: const TextTheme(
-      bodyLarge: TextStyle( fontSize: 14,color: Color.red,fontWeight: FontWeight.w400),
-      bodyMedium: TextStyle(fontWeight: FontWeight.w400),
-      titleMedium: TextStyle(fontWeight: FontWeight.w600),
-      headlineSmall: TextStyle(fontWeight: FontWeight.w700),
+      bodyLarge: TextStyle( fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
+      bodyMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
+      titleMedium: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w600),
+      headlineSmall: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w700),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
