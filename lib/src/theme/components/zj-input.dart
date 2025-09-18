@@ -8,6 +8,7 @@ import 'zj-text.dart';
 
 
 
+/// Base Input Component
 class ZjInput extends StatelessWidget {
   final String? hintText;
   final IconData? startIcon;
@@ -18,6 +19,7 @@ class ZjInput extends StatelessWidget {
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
+
   const ZjInput({
     super.key,
     this.hintText,
@@ -42,7 +44,7 @@ class ZjInput extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: startIcon != null
-            ? Icon(startIcon, size: 24, color: Colors.black)
+            ? Icon(startIcon, size: 22, color: Colors.black)
             : null,
         suffixIcon: endIcon != null
             ? IconButton(
@@ -50,24 +52,6 @@ class ZjInput extends StatelessWidget {
           onPressed: onEndIconPressed,
         )
             : null,
-        filled: true,
-        fillColor: const Color.fromRGBO(35, 174, 183, 0.02),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 10,
-          horizontal: 12,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(
-            color: Color.fromRGBO(0, 0, 0, 0.08),
-          ),
-        ),
-      ),
-      style: const TextStyle(
-        fontFamily: "Zain_K_Q",
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-        color: Color.fromRGBO(0, 0, 0, 0.70),
       ),
     );
   }
@@ -75,6 +59,7 @@ class ZjInput extends StatelessWidget {
 
 
 
+/// Email Input
 class ZjEmailInput extends StatelessWidget {
   final TextEditingController? controller;
 
@@ -92,6 +77,7 @@ class ZjEmailInput extends StatelessWidget {
   }
 }
 
+/// Phone Input
 class ZjPhoneInput extends StatelessWidget {
   final TextEditingController? controller;
 
@@ -105,15 +91,15 @@ class ZjPhoneInput extends StatelessWidget {
       startIcon: Icons.phone,
       keyboardType: TextInputType.phone,
       validator: ZjValidator.phone,
-      inputFormatters: [
-        FilteringTextInputFormatter.digitsOnly, // ✅ only numbers allowed
-        LengthLimitingTextInputFormatter(15),   // optional: max length
+      inputFormatters: const [
+        FilteringTextInputFormatter.digitsOnly, // only numbers allowed
+        LengthLimitingTextInputFormatter(15),   // max length
       ],
     );
   }
 }
 
-
+/// Password Input with toggle
 class ZjPasswordInput extends StatefulWidget {
   final TextEditingController? controller;
 
