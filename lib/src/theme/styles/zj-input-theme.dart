@@ -6,7 +6,7 @@ class ZjInputTheme {
 
  static  InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
       filled: true,
-      fillColor: ZjColors.primary, // background
+      fillColor: ZjColors.secondary, // background
       contentPadding: const EdgeInsets.symmetric(
         vertical: 10, // padding top/bottom
         horizontal: 12, // padding left/right
