@@ -7,7 +7,7 @@ import 'theme/components/zj-button.dart';
 import 'theme/components/zj-input.dart';
 
 class ZjInputTheme {
-  ZjTheme._();
+  ZjInputTheme._();
 
  static InputDecorationTheme  lightInputDecorationTheme(
       filled: true,
