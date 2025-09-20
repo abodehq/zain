@@ -9,7 +9,7 @@ import 'theme/components/zj-input.dart';
 class ZjInputTheme {
   ZjInputTheme._();
 
- static InputDecorationTheme  lightInputDecorationTheme(
+ static  InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
       filled: true,
       fillColor: const Color.fromRGBO(35, 174, 183, 0.02), // background
       contentPadding: const EdgeInsets.symmetric(
@@ -44,7 +44,7 @@ class ZjInputTheme {
       ),
     );
 
-     static InputDecorationTheme  darkInputDecorationTheme(
+     static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
       filled: true,
       fillColor: const Color.fromRGBO(35, 174, 183, 0.02), // background
       contentPadding: const EdgeInsets.symmetric(
