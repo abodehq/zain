@@ -8,4 +8,6 @@ export 'src/theme/components/zj-text.dart';
 export 'src/theme/components/zj-button.dart';
 export 'src/theme/components/zj-icons.dart';
 export 'src/theme/components/zj-input.dart';
+export 'src/theme/components/zj-divider.dart';
+export 'src/theme/components/zj-zigzag.dart';
 
