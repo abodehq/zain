@@ -1,41 +1,50 @@
 import 'package:flutter/material.dart';
 import '../core/zj-colors.dart';
 import '../core/zj-units.dart';
+import '../theme_extension/zj_theme_extension.dart';
 import 'zj-text.dart';
 
 /// A zigzag separator that fills the top area and draws a stroke on the zigzag edge,
 /// with optional bottom fill color.
 class ZjZigzag extends StatelessWidget {
-  final double zigzagHeight;
-  final double zigzagWidth;
-  final Color fillColor;
-  final Color strokeColor;
-  final double strokeWidth;
+  final double? zigzagHeight;
+  final double? zigzagWidth;
+  final Color? fillColor;
+  final Color? strokeColor;
+  final double? strokeWidth;
   final Color? bottomFillColor; // new
 
-  const ZjZigzag({
+  ZjZigzag({
     Key? key,
-    this.zigzagHeight = 12,
-    this.zigzagWidth = 22,
-    this.fillColor = ZjColors.white,
-    this.strokeColor = ZjColors.black8,
-    this.strokeWidth = 1,
-    this.bottomFillColor= ZjColors.white,
+    this.zigzagHeight ,
+    this.zigzagWidth ,
+    this.fillColor ,
+    this.strokeColor ,
+    this.strokeWidth ,
+    this.bottomFillColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    final theme = Theme.of(context).zjTheme.zigzagTheme;
+    final double height = zigzagHeight ?? theme.zigzagHeight;
+    final double width = zigzagWidth ?? theme.zigzagWidth;
+    final Color fill = fillColor ?? theme.fillColor;
+    final Color stroke = strokeColor ?? theme.strokeColor;
+    final double strokeW = strokeWidth ?? theme.strokeWidth;
+    final Color? bottomFill = bottomFillColor ?? theme.bottomFillColor;
     return CustomPaint(
       painter: _ZigZagFillTopPainter(
-        zigzagHeight: zigzagHeight,
-        zigzagWidth: zigzagWidth,
-        fillColor: fillColor,
-        strokeColor: strokeColor,
-        strokeWidth: strokeWidth,
-        bottomFillColor: bottomFillColor,
+        zigzagHeight: width,
+        zigzagWidth: height,
+        fillColor: fill,
+        strokeColor: stroke,
+        strokeWidth: strokeW,
+        bottomFillColor: bottomFill,
       ),
       child: SizedBox(
-        height: zigzagHeight + strokeWidth,
+        height: height + width,
         width: double.infinity,
       ),
     );

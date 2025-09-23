@@ -6,6 +6,11 @@ import 'theme/components/zj-text.dart';
 import 'theme/components/zj-button.dart';
 import 'theme/components/zj-input.dart';
 import 'theme/styles/zj-input-theme.dart';
+
+import 'theme/theme_extension/zj_theme_extension.dart';
+import 'theme/theme_extension/zj_zigzag_theme.dart';
+
+
 class ZjTheme {
   ZjTheme._();
 
@@ -43,6 +48,19 @@ class ZjTheme {
       secondary: ZjColors.secondary,
       error: ZjColors.error,
     ),
+  ).copyWith(
+    extensions: <ThemeExtension<dynamic>>[
+      const ZjThemeExtension(
+        zigzagTheme: ZjZigzagTheme(
+          zigzagHeight: 12,
+          zigzagWidth: 22,
+          fillColor: ZjColors.white,
+          strokeColor: ZjColors.black12,
+          strokeWidth: 1,
+          bottomFillColor: ZjColors.black12,
+        ),
+      ),
+    ],
   );
 
   /// Dark Theme
