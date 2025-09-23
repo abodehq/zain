@@ -3,14 +3,15 @@ import '../core/zj-colors.dart';
 import '../core/zj-units.dart';
 import 'zj-text.dart';
 
-
-/// A zigzag separator that fills the top area and draws a stroke on the zigzag edge.
+/// A zigzag separator that fills the top area and draws a stroke on the zigzag edge,
+/// with optional bottom fill color.
 class ZjZigzag extends StatelessWidget {
   final double zigzagHeight;
   final double zigzagWidth;
   final Color fillColor;
   final Color strokeColor;
   final double strokeWidth;
+  final Color? bottomFillColor; // new
 
   const ZjZigzag({
     Key? key,
@@ -19,6 +20,7 @@ class ZjZigzag extends StatelessWidget {
     this.fillColor = ZjColors.white,
     this.strokeColor = ZjColors.black8,
     this.strokeWidth = 1,
+    this.bottomFillColor= ZjColors.white,
   }) : super(key: key);
 
   @override
@@ -30,9 +32,10 @@ class ZjZigzag extends StatelessWidget {
         fillColor: fillColor,
         strokeColor: strokeColor,
         strokeWidth: strokeWidth,
+        bottomFillColor: bottomFillColor,
       ),
       child: SizedBox(
-        height: zigzagHeight + strokeWidth, // avoid clipping
+        height: zigzagHeight + strokeWidth,
         width: double.infinity,
       ),
     );
@@ -45,6 +48,7 @@ class _ZigZagFillTopPainter extends CustomPainter {
   final Color fillColor;
   final Color strokeColor;
   final double strokeWidth;
+  final Color? bottomFillColor;
 
   _ZigZagFillTopPainter({
     required this.zigzagHeight,
@@ -52,10 +56,19 @@ class _ZigZagFillTopPainter extends CustomPainter {
     required this.fillColor,
     required this.strokeColor,
     required this.strokeWidth,
+    this.bottomFillColor,
   });
 
   @override
   void paint(Canvas canvas, Size size) {
+    // Fill bottom if provided
+    if (bottomFillColor != null) {
+      final bottomPaint = Paint()
+        ..color = bottomFillColor!
+        ..style = PaintingStyle.fill;
+      canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), bottomPaint);
+    }
+
     final fillPaint = Paint()
       ..color = fillColor
       ..style = PaintingStyle.fill;
@@ -102,6 +115,7 @@ class _ZigZagFillTopPainter extends CustomPainter {
         zigzagWidth != oldDelegate.zigzagWidth ||
         fillColor != oldDelegate.fillColor ||
         strokeColor != oldDelegate.strokeColor ||
-        strokeWidth != oldDelegate.strokeWidth;
+        strokeWidth != oldDelegate.strokeWidth ||
+        bottomFillColor != oldDelegate.bottomFillColor;
   }
 }
