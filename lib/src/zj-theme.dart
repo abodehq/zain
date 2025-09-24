@@ -15,8 +15,13 @@ class ZjTheme {
   ZjTheme._();
 
   static ThemeData get light => ThemeData(
+    useMaterial3: true,
     brightness: Brightness.light,
     primaryColor: ZjColors.primary,
+    dividerTheme: const DividerThemeData(
+      color: ZjLightColors.borderPrimary,
+      thickness: 1,
+    ),
     scaffoldBackgroundColor: ZjLightColors.screenPrimaryBackground,
     fontFamily: "zain",
     // textTheme: const TextTheme(

@@ -6,6 +6,7 @@ import 'zj_zigzag_theme.dart';
 @immutable
 class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
   final ZjZigzagTheme zigzagTheme;
+
   //final ZjButtonTheme buttonTheme;
   // Add more themes here as needed
 
