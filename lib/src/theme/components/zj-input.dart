@@ -3,10 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:zain/zain.dart';
 
 
-
-
-/// Base Input Component
-class ZjInput extends StatelessWidget {
+/// Base Input Component with dynamic fill color
+class ZjInput extends StatefulWidget {
   final String? hintText;
   final IconData? startIcon;
   final IconData? endIcon;
@@ -25,7 +23,7 @@ class ZjInput extends StatelessWidget {
     this.endIcon,
     this.onEndIconPressed,
     this.obscureText = false,
-    this.textInputAction =TextInputAction.next,
+    this.textInputAction = TextInputAction.next,
     this.controller,
     this.keyboardType,
     this.validator,
@@ -33,30 +31,72 @@ class ZjInput extends StatelessWidget {
   });
 
   @override
+  State<ZjInput> createState() => _ZjInputState();
+}
+
+class _ZjInputState extends State<ZjInput> {
+  late FocusNode _focusNode;
+  late ValueNotifier<bool> _hasFocus;
+
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = FocusNode();
+    _hasFocus = ValueNotifier(false);
+
+    _focusNode.addListener(() {
+      _hasFocus.value = _focusNode.hasFocus;
+    });
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    _hasFocus.dispose();
+    super.dispose();
+  }
+
+  Color _getFillColor(bool isFocused) {
+    if (isFocused) return ZjColors.third54; // Focused color
+    if ((widget.controller?.text ?? '').isEmpty) return ZjColors.primary54; // Hint background
+    return ZjColors.black54; // Default fill
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: keyboardType,
-      textInputAction: textInputAction,
-      obscureText: obscureText,
-      validator: validator,
-      inputFormatters: inputFormatters,
-      decoration: InputDecoration(
-        hintText: hintText,
-        prefixIcon: startIcon != null
-            ? Icon(startIcon,size: 24.0)
-            : null,
-        suffixIcon: endIcon != null
-            ? IconButton(
-          icon: Icon(endIcon,size: 18.0),
-          onPressed: onEndIconPressed,
-        )
-            : null,
-      ),
+    return ValueListenableBuilder<bool>(
+      valueListenable: _hasFocus,
+      builder: (context, isFocused, _) {
+        return TextFormField(
+          focusNode: _focusNode,
+          controller: widget.controller,
+          keyboardType: widget.keyboardType,
+          textInputAction: widget.textInputAction,
+          obscureText: widget.obscureText,
+          validator: widget.validator,
+          inputFormatters: widget.inputFormatters,
+
+          decoration: InputDecoration(
+            hintText: "Enter something",  // ✅ Always shows when empty
+            //labelText: "Email",
+            filled: true,
+            fillColor: _getFillColor(isFocused), // Dynamic only
+            prefixIcon: widget.startIcon != null
+                ? Icon(widget.startIcon, size: 24.0)
+                : null,
+            suffixIcon: widget.endIcon != null
+                ? IconButton(
+              icon: Icon(widget.endIcon, size: 18.0),
+              onPressed: widget.onEndIconPressed,
+            )
+                : null,
+            // Do not repeat hintStyle or borders; they come from ThemeData.inputDecorationTheme
+          ),
+        );
+      },
     );
   }
 }
-
 
 
 /// Email Input

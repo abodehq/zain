@@ -35,7 +35,7 @@ class ZjInputTheme {
       hintStyle: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
-        color: ZjColors.black2, // lighter hint
+        color: ZjColors.black, // lighter hint
       ),
     );
 
