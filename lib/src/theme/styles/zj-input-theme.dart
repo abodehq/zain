@@ -6,7 +6,16 @@ class ZjInputTheme {
 
  static  InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
       filled: true,
-      fillColor: ZjColors.secondary2, // background
+      //fillColor: ZjColors.secondary2, // background
+   fillColor: WidgetStateColor.resolveWith((states) {
+     if (states.contains(WidgetState.focused)) {
+       return ZjColors.white; // focused background
+     }
+     if (states.contains(WidgetState.disabled)) {
+       return ZjColors.black8; // disabled background
+     }
+     return ZjColors.secondary2; // default background
+   }),
       contentPadding: const EdgeInsets.symmetric(
         vertical: 10, // padding top/bottom
         horizontal: 12, // padding left/right

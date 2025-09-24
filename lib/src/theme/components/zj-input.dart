@@ -47,6 +47,7 @@ class _ZjInputState extends State<ZjInput> {
     _focusNode.addListener(() {
       _hasFocus.value = _focusNode.hasFocus;
     });
+
   }
 
   @override
@@ -57,9 +58,11 @@ class _ZjInputState extends State<ZjInput> {
   }
 
   Color _getFillColor(bool isFocused) {
-    if (isFocused) return ZjColors.third54; // Focused color
-    if ((widget.controller?.text ?? '').isEmpty) return ZjColors.primary54; // Hint background
-    return ZjColors.black54; // Default fill
+
+
+    if (isFocused) return ZjColors.white; // Focused color
+    if ((widget.controller?.text ?? '').isEmpty) return ZjColors.black2; // Hint background
+    return ZjColors.secondary2; // Default fill
   }
 
   @override
@@ -67,7 +70,22 @@ class _ZjInputState extends State<ZjInput> {
     return ValueListenableBuilder<bool>(
       valueListenable: _hasFocus,
       builder: (context, isFocused, _) {
-        return TextFormField(
+        return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            // ✅ Soft glow only when focused
+            boxShadow: isFocused
+                ? [
+              BoxShadow(
+                color: ZjColors.secondary12,
+                blurRadius: 0,
+                spreadRadius: 4,
+                offset: Offset.zero,
+              ),
+            ]
+                : [],
+          ),
+          child: TextFormField(
           focusNode: _focusNode,
           controller: widget.controller,
           keyboardType: widget.keyboardType,
@@ -92,7 +110,7 @@ class _ZjInputState extends State<ZjInput> {
                 : null,
             // Do not repeat hintStyle or borders; they come from ThemeData.inputDecorationTheme
           ),
-        );
+        ));
       },
     );
   }
