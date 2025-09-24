@@ -6,36 +6,36 @@ class ZjInputTheme {
 
  static  InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
       filled: true,
-      fillColor: ZjColors.secondary, // background
+      fillColor: ZjColors.secondary2, // background
       contentPadding: const EdgeInsets.symmetric(
         vertical: 10, // padding top/bottom
         horizontal: 12, // padding left/right
       ),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8), // border-radius
+        borderRadius: BorderRadius.circular(ZjUnits.rmd), // border-radius
         borderSide: const BorderSide(
-          color: Color.fromRGBO(0, 0, 0, 0.08), // border color
+          color: ZjColors.black8, // border color
           width: 1,
         ),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(
-          color: Color.fromRGBO(0, 0, 0, 0.08),
+          color: ZjColors.black8,
           width: 1,
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: ZjColors.primary, // change border on focus
+          color: ZjColors.secondary54, // change border on focus
           width: 1.5,
         ),
       ),
       hintStyle: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
-        color: Color.fromRGBO(0, 0, 0, 0.4), // lighter hint
+        color: ZjColors.black2, // lighter hint
       ),
     );
 
