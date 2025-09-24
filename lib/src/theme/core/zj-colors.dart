@@ -86,6 +86,7 @@ class ZjLightColors {
   static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
 
   static const Color borderPrimary = ZjColors.black8;
+  static const Color dividerTextColor = ZjColors.black;
   static const Color icon = ZjColors.black;
 }
 

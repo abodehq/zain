@@ -11,3 +11,8 @@ export 'src/theme/components/zj-input.dart';
 export 'src/theme/components/zj-divider.dart';
 export 'src/theme/components/zj-zigzag.dart';
 
+
+export 'src/theme/theme_extension/zj_theme_extension.dart';
+export 'src/theme/theme_extension/zj_zigzag_theme.dart';
+
+

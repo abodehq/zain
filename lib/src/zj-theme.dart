@@ -56,6 +56,7 @@ class ZjTheme {
   ).copyWith(
     extensions: <ThemeExtension<dynamic>>[
       const ZjThemeExtension(
+        dividerTextColor: ZjLightColors.dividerTextColor,
         zigzagTheme: ZjZigzagTheme(
           zigzagHeight: 12,
           zigzagWidth: 18,

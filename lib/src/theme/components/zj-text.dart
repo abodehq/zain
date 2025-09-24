@@ -26,306 +26,288 @@ class ZjTextVars {
     fontWeight: light,
   );
 
-  static const TextStyle txt36 = TextStyle(
-    fontSize: s36,
-    fontWeight: regular,
-  );
+  static const TextStyle txt36 = TextStyle(fontSize: s36, fontWeight: regular);
 
-  static const TextStyle txtBold36 = TextStyle(
-    fontSize: s36,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold36 = TextStyle(fontSize: s36, fontWeight: bold);
 
-  static const TextStyle txt32 = TextStyle(
-    fontSize: s32,
-    fontWeight: regular,
-  );
+  static const TextStyle txt32 = TextStyle(fontSize: s32, fontWeight: regular);
 
-  static const TextStyle txtBold32 = TextStyle(
-    fontSize: s32,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold32 = TextStyle(fontSize: s32, fontWeight: bold);
 
   static const TextStyle txtLight24 = TextStyle(
     fontSize: s24,
     fontWeight: light,
   );
 
-  static const TextStyle txt24 = TextStyle(
-    fontSize: s24,
-    fontWeight: regular,
-  );
+  static const TextStyle txt24 = TextStyle(fontSize: s24, fontWeight: regular);
 
-  static const TextStyle txtBold24 = TextStyle(
-    fontSize: s24,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold24 = TextStyle(fontSize: s24, fontWeight: bold);
 
-  static const TextStyle txt20 = TextStyle(
-    fontSize: s20,
-    fontWeight: regular,
-  );
+  static const TextStyle txt20 = TextStyle(fontSize: s20, fontWeight: regular);
 
-  static const TextStyle txtBold20 = TextStyle(
-    fontSize: s20,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold20 = TextStyle(fontSize: s20, fontWeight: bold);
 
-  static const TextStyle txt18 = TextStyle(
-    fontSize: s18,
-    fontWeight: regular,
-  );
+  static const TextStyle txt18 = TextStyle(fontSize: s18, fontWeight: regular);
 
-  static const TextStyle txtBold18 = TextStyle(
-    fontSize: s18,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold18 = TextStyle(fontSize: s18, fontWeight: bold);
 
   static const TextStyle txtLight16 = TextStyle(
     fontSize: s16,
     fontWeight: light,
   );
 
-  static const TextStyle txt16 = TextStyle(
-    fontSize: s16,
-    fontWeight: regular,
-  );
+  static const TextStyle txt16 = TextStyle(fontSize: s16, fontWeight: regular);
 
-  static const TextStyle txtBold16 = TextStyle(
-    fontSize: s16,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold16 = TextStyle(fontSize: s16, fontWeight: bold);
 
   static const TextStyle txtLight14 = TextStyle(
     fontSize: s14,
     fontWeight: light,
   );
 
-  static const TextStyle txt14 = TextStyle(
-    fontSize: s14,
-    fontWeight: regular,
-  );
+  static const TextStyle txt14 = TextStyle(fontSize: s14, fontWeight: regular);
 
-  static const TextStyle txtBold14 = TextStyle(
-    fontSize: s14,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold14 = TextStyle(fontSize: s14, fontWeight: bold);
 
   static const TextStyle txtLight12 = TextStyle(
     fontSize: s12,
     fontWeight: light,
   );
 
-  static const TextStyle txt12 = TextStyle(
-    fontSize: s12,
-    fontWeight: regular,
-  );
+  static const TextStyle txt12 = TextStyle(fontSize: s12, fontWeight: regular);
 
-  static const TextStyle txtBold12 = TextStyle(
-    fontSize: s12,
-    fontWeight: bold,
-  );
+  static const TextStyle txtBold12 = TextStyle(fontSize: s12, fontWeight: bold);
 }
-
-
 
 /// ========= Semantic Styles =========
 class ZjTextStyles {
-  static const TextStyle h1 = TextStyle(fontSize: 36, fontWeight: FontWeight.bold);
-  static const TextStyle h2 = TextStyle(fontSize: 36, fontWeight: FontWeight.normal);
-  static const TextStyle h3 = TextStyle(fontSize: 32, fontWeight: FontWeight.bold);
-  static const TextStyle h4 = TextStyle(fontSize: 32, fontWeight: FontWeight.normal);
-  static const TextStyle h5 = TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
-  static const TextStyle h6 = TextStyle(fontSize: 24, fontWeight: FontWeight.normal);
+  static const TextStyle h1 = TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle h2 = TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle h3 = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle h4 = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle h5 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle h6 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.normal,
+  );
 
-  static const TextStyle body = TextStyle(fontSize: 24, fontWeight: FontWeight.normal);
-  static const TextStyle caption = TextStyle(fontSize: 24, fontWeight: FontWeight.w300);
+  static const TextStyle body = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle caption = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w300,
+  );
+  static const TextStyle dividerTextStyle = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 }
-
 
 /// ========= Components extending Text =========
 class H1 extends Text {
   H1(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h1).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h1).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
 }
 
 class H2 extends Text {
   H2(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h2).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h2).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
 }
 
 class H3 extends Text {
   H3(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h3).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h3).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
 }
 
 class H4 extends Text {
   H4(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h4).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h4).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
 }
 
 class H5 extends Text {
   H5(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h5).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h5).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
 }
 
 class H6 extends Text {
   H6(
-      super.data, {
-        super.key,
-        Color? color,
-        TextStyle? style,
-        TextAlign? textAlign,
-        int? maxLines,
-        TextOverflow? overflow,
-        bool? softWrap,
-        double? textScaleFactor,
-        Locale? locale,
-        StrutStyle? strutStyle,
-        TextWidthBasis? textWidthBasis,
-        TextHeightBehavior? textHeightBehavior,
-        Color? selectionColor,
-      }) : super(
-    style: (style ?? ZjTextStyles.h6).copyWith(color: color),
-    textAlign: textAlign,
-    maxLines: maxLines,
-    overflow: overflow,
-    softWrap: softWrap,
-    textScaleFactor: textScaleFactor,
-    locale: locale,
-    strutStyle: strutStyle,
-    textWidthBasis: textWidthBasis,
-    textHeightBehavior: textHeightBehavior,
-    selectionColor: selectionColor,
-  );
+    super.data, {
+    super.key,
+    Color? color,
+    TextStyle? style,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    bool? softWrap,
+    double? textScaleFactor,
+    Locale? locale,
+    StrutStyle? strutStyle,
+    TextWidthBasis? textWidthBasis,
+    TextHeightBehavior? textHeightBehavior,
+    Color? selectionColor,
+  }) : super(
+         style: (style ?? ZjTextStyles.h6).copyWith(color: color),
+         textAlign: textAlign,
+         maxLines: maxLines,
+         overflow: overflow,
+         softWrap: softWrap,
+         textScaleFactor: textScaleFactor,
+         locale: locale,
+         strutStyle: strutStyle,
+         textWidthBasis: textWidthBasis,
+         textHeightBehavior: textHeightBehavior,
+         selectionColor: selectionColor,
+       );
+}
+
+class DividerText extends Text {
+  DividerText(super.data, {super.key, Color? color})
+    : super(style: (ZjTextStyles.dividerTextStyle).copyWith(color: color));
 }
