@@ -87,6 +87,7 @@ class ZjLightColors {
 
   static const Color borderPrimary = ZjColors.black8;
   static const Color dividerTextColor = ZjColors.black;
+  static const Color dividerStrokeColor = ZjColors.black8;
   static const Color icon = ZjColors.black;
 }
 
@@ -99,8 +100,10 @@ class ZjDarkColors {
   static const Color txtPrimaryWhite = ZjColors.white;
   static const Color txtSecondaryWhite = ZjColors.white70;
 
-  static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
+  static const Color screenPrimaryBackground = Color(0xFF000000);
 
-  static const Color borderPrimary = ZjColors.black8;
-  static const Color icon = ZjColors.black;
+  static const Color borderPrimary = ZjColors.white8;
+  static const Color dividerTextColor = ZjColors.white;
+  static const Color dividerStrokeColor = ZjColors.white87;
+  static const Color icon = ZjColors.white;
 }
