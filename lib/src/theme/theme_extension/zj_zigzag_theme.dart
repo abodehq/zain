@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../core/zj-colors.dart';
+import 'package:zain/zain.dart';
 
 @immutable
 class ZjZigzagTheme {

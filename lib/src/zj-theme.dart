@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
-import 'theme/core/zj-units.dart';
-import 'theme/core/zj-colors.dart';
-import 'theme/components/zj-icons.dart';
-import 'theme/components/zj-text.dart';
-import 'theme/components/zj-button.dart';
-import 'theme/components/zj-input.dart';
-import 'theme/styles/zj-input-theme.dart';
-
-import 'theme/theme_extension/zj_theme_extension.dart';
-import 'theme/theme_extension/zj_zigzag_theme.dart';
+import 'package:zain/zain.dart';
 
 
 class ZjTheme {

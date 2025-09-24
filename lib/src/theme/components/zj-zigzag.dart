@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/zj-colors.dart';
-import '../core/zj-units.dart';
-import '../theme_extension/zj_theme_extension.dart';
-import 'zj-text.dart';
+import 'package:zain/zain.dart';
 
 /// A zigzag separator that fills the top area and draws a stroke on the zigzag edge,
 /// with optional bottom fill color.

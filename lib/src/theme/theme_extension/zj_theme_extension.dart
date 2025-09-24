@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'zj_zigzag_theme.dart';
+import 'package:zain/zain.dart';
 
 
 @immutable

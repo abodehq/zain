@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/zj-colors.dart';
-import '../core/zj-units.dart';
+import 'package:zain/zain.dart';
 class ZjIcons {
   static const String zjIconsFontFamily = 'zj-icons';
 

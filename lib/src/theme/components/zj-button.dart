@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/zj-colors.dart';
-import '../core/zj-units.dart';
-import 'zj-text.dart';
+import 'package:zain/zain.dart';
 
 
 class ZjButton extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/zj-colors.dart';
+import 'package:zain/zain.dart';
 
 class ZjInputTheme {
   ZjInputTheme._();
