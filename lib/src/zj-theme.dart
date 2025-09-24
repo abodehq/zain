@@ -17,7 +17,7 @@ class ZjTheme {
   static ThemeData get light => ThemeData(
     brightness: Brightness.light,
     primaryColor: ZjColors.primary,
-    scaffoldBackgroundColor: ZjColors.white,
+    scaffoldBackgroundColor: ZjLightColors.screenPrimaryBackground,
     fontFamily: "zain",
     // textTheme: const TextTheme(
     //   bodyLarge: TextStyle( fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w400),
@@ -53,11 +53,11 @@ class ZjTheme {
       const ZjThemeExtension(
         zigzagTheme: ZjZigzagTheme(
           zigzagHeight: 12,
-          zigzagWidth: 22,
+          zigzagWidth: 18,
           fillColor: ZjColors.white,
-          strokeColor: ZjColors.black12,
+          strokeColor: ZjColors.black8,
           strokeWidth: 1,
-          bottomFillColor: ZjColors.black12,
+          bottomFillColor: ZjLightColors.screenPrimaryBackground,
         ),
       ),
     ],

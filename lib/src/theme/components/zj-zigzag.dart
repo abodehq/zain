@@ -36,15 +36,15 @@ class ZjZigzag extends StatelessWidget {
     final Color? bottomFill = bottomFillColor ?? theme.bottomFillColor;
     return CustomPaint(
       painter: _ZigZagFillTopPainter(
-        zigzagHeight: width,
-        zigzagWidth: height,
+        zigzagHeight: height,
+        zigzagWidth: width,
         fillColor: fill,
         strokeColor: stroke,
         strokeWidth: strokeW,
         bottomFillColor: bottomFill,
       ),
       child: SizedBox(
-        height: height + width,
+        height: height ,
         width: double.infinity,
       ),
     );

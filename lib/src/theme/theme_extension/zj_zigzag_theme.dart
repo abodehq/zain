@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import '../core/zj-colors.dart';
 
 @immutable
 class ZjZigzagTheme {
@@ -8,15 +9,15 @@ class ZjZigzagTheme {
   final Color fillColor;
   final Color strokeColor;
   final double strokeWidth;
-  final Color? bottomFillColor;
+  final Color bottomFillColor;
 
   const ZjZigzagTheme({
     this.zigzagHeight = 12,
     this.zigzagWidth = 22,
-    this.fillColor = Colors.white,
-    this.strokeColor = Colors.black12,
+    this.fillColor =ZjColors.white,
+    this.strokeColor = ZjColors.black2 ,
     this.strokeWidth = 1,
-    this.bottomFillColor,
+    this.bottomFillColor= ZjColors.white,
   });
 
   ZjZigzagTheme copyWith({
@@ -45,9 +46,7 @@ class ZjZigzagTheme {
       fillColor: Color.lerp(fillColor, other.fillColor, t)!,
       strokeColor: Color.lerp(strokeColor, other.strokeColor, t)!,
       strokeWidth: lerpDouble(strokeWidth, other.strokeWidth, t)!,
-      bottomFillColor: bottomFillColor != null && other.bottomFillColor != null
-          ? Color.lerp(bottomFillColor, other.bottomFillColor, t)
-          : bottomFillColor ?? other.bottomFillColor,
+      bottomFillColor: Color.lerp(bottomFillColor, other.bottomFillColor, t)!,
     );
   }
 }

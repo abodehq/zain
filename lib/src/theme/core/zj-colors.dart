@@ -71,14 +71,35 @@ class ZjColors {
   static const Color white5  = Color(0x0DFFFFFF);
   static const Color white2  = Color(0x05FFFFFF);
 
-  static const Color txtBrandPrimary = primary;
-  static const Color txtBrandSecondary = secondary;
-  static const Color txtBrandThird = third;
-  static const Color txtPrimaryBlack = black87;
-  static const Color txtSecondaryBlack = black70;
-  static const Color txtPrimaryWhite = white;
-  static const Color txtSecondaryWhite = white70;
 
-  static const Color borderPrimary = black8;
-  static const Color icon = black;
+}
+
+class ZjLightColors {
+  static const Color txtBrandPrimary = ZjColors.primary;
+  static const Color txtBrandSecondary = ZjColors.secondary;
+  static const Color txtBrandThird = ZjColors.third;
+  static const Color txtPrimaryBlack = ZjColors.black87;
+  static const Color txtSecondaryBlack = ZjColors.black70;
+  static const Color txtPrimaryWhite = ZjColors.white;
+  static const Color txtSecondaryWhite = ZjColors.white70;
+
+  static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
+
+  static const Color borderPrimary = ZjColors.black8;
+  static const Color icon = ZjColors.black;
+}
+
+class ZjDarkColors {
+  static const Color txtBrandPrimary = ZjColors.primary;
+  static const Color txtBrandSecondary = ZjColors.secondary;
+  static const Color txtBrandThird = ZjColors.third;
+  static const Color txtPrimaryBlack = ZjColors.black87;
+  static const Color txtSecondaryBlack = ZjColors.black70;
+  static const Color txtPrimaryWhite = ZjColors.white;
+  static const Color txtSecondaryWhite = ZjColors.white70;
+
+  static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
+
+  static const Color borderPrimary = ZjColors.black8;
+  static const Color icon = ZjColors.black;
 }
