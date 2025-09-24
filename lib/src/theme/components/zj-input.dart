@@ -37,32 +37,36 @@ class ZjInput extends StatefulWidget {
 class _ZjInputState extends State<ZjInput> {
   late FocusNode _focusNode;
   late ValueNotifier<bool> _hasFocus;
+  late ValueNotifier<bool> _hasText;
 
   @override
   void initState() {
     super.initState();
     _focusNode = FocusNode();
     _hasFocus = ValueNotifier(false);
+    _hasText = ValueNotifier(widget.controller?.text.isNotEmpty ?? false);
 
     _focusNode.addListener(() {
       _hasFocus.value = _focusNode.hasFocus;
     });
 
+    widget.controller?.addListener(() {
+      _hasText.value = widget.controller!.text.isNotEmpty;
+    });
   }
 
   @override
   void dispose() {
     _focusNode.dispose();
     _hasFocus.dispose();
+    _hasText.dispose();
     super.dispose();
   }
 
-  Color _getFillColor(bool isFocused) {
-
-
+  Color _getFillColor(bool isFocused, bool hasText) {
     if (isFocused) return ZjColors.white; // Focused color
-    if ((widget.controller?.text ?? '').isEmpty) return ZjColors.black2; // Hint background
-    return ZjColors.secondary2; // Default fill
+    if (!hasText) return ZjColors.black2; // Empty background
+    return ZjColors.secondary2; // Filled background
   }
 
   @override
@@ -70,47 +74,50 @@ class _ZjInputState extends State<ZjInput> {
     return ValueListenableBuilder<bool>(
       valueListenable: _hasFocus,
       builder: (context, isFocused, _) {
-        return Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            // ✅ Soft glow only when focused
-            boxShadow: isFocused
-                ? [
-              BoxShadow(
-                color: ZjColors.secondary12,
-                blurRadius: 0,
-                spreadRadius: 4,
-                offset: Offset.zero,
+        return ValueListenableBuilder<bool>(
+          valueListenable: _hasText,
+          builder: (context, hasText, _) {
+            return Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                // ✅ Soft glow only when focused
+                boxShadow: isFocused
+                    ? [
+                  BoxShadow(
+                    color: ZjColors.secondary12,
+                    blurRadius: 0,
+                    spreadRadius: 4,
+                    offset: Offset.zero,
+                  ),
+                ]
+                    : [],
               ),
-            ]
-                : [],
-          ),
-          child: TextFormField(
-          focusNode: _focusNode,
-          controller: widget.controller,
-          keyboardType: widget.keyboardType,
-          textInputAction: widget.textInputAction,
-          obscureText: widget.obscureText,
-          validator: widget.validator,
-          inputFormatters: widget.inputFormatters,
-
-          decoration: InputDecoration(
-            hintText: "Enter something",  // ✅ Always shows when empty
-            //labelText: "Email",
-            filled: true,
-            fillColor: _getFillColor(isFocused), // Dynamic only
-            prefixIcon: widget.startIcon != null
-                ? Icon(widget.startIcon, size: 24.0)
-                : null,
-            suffixIcon: widget.endIcon != null
-                ? IconButton(
-              icon: Icon(widget.endIcon, size: 18.0),
-              onPressed: widget.onEndIconPressed,
-            )
-                : null,
-            // Do not repeat hintStyle or borders; they come from ThemeData.inputDecorationTheme
-          ),
-        ));
+              child: TextFormField(
+                focusNode: _focusNode,
+                controller: widget.controller,
+                keyboardType: widget.keyboardType,
+                textInputAction: widget.textInputAction,
+                obscureText: widget.obscureText,
+                validator: widget.validator,
+                inputFormatters: widget.inputFormatters,
+                decoration: InputDecoration(
+                  hintText: "Enter something", // ✅ Always shows when empty
+                  filled: true,
+                  fillColor: _getFillColor(isFocused, hasText), // ✅ now depends on text too
+                  prefixIcon: widget.startIcon != null
+                      ? Icon(widget.startIcon, size: 24.0)
+                      : null,
+                  suffixIcon: widget.endIcon != null
+                      ? IconButton(
+                    icon: Icon(widget.endIcon, size: 18.0),
+                    onPressed: widget.onEndIconPressed,
+                  )
+                      : null,
+                ),
+              ),
+            );
+          },
+        );
       },
     );
   }
