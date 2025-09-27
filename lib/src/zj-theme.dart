@@ -31,7 +31,9 @@ class ZjTheme {
             height: 1.5, // line-height equivalent
           ),
         ),
-
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ZjButtonTheme.lightButtonTheme, // your global style
+        ),
         inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
         iconTheme: const IconThemeData(
           color: ZjColors.black54, // Light theme icon color
@@ -49,6 +51,9 @@ class ZjTheme {
         extensions: <ThemeExtension<dynamic>>[
           const ZjThemeExtension(
             dividerTextColor: ZjLightColors.dividerTextColor,
+            buttonPrimaryBackgroundColor: ZjLightColors.buttonPrimaryBackgroundColor,
+            buttonSecondaryBackgroundColor: ZjLightColors.buttonSecondaryBackgroundColor,
+            buttonDisableBackgroundColor: ZjLightColors.buttonDisableBackgroundColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,
@@ -106,6 +111,9 @@ class ZjTheme {
         extensions: <ThemeExtension<dynamic>>[
           const ZjThemeExtension(
             dividerTextColor: ZjDarkColors.dividerTextColor,
+            buttonPrimaryBackgroundColor: ZjLightColors.buttonPrimaryBackgroundColor,
+            buttonSecondaryBackgroundColor: ZjLightColors.buttonSecondaryBackgroundColor,
+            buttonDisableBackgroundColor: ZjLightColors.buttonDisableBackgroundColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,

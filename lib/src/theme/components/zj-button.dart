@@ -6,49 +6,44 @@ class ZjButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String label;
   final IconData? icon;
-  final Color backgroundColor;
-  final Color textColor;
-  final Color disabledBackgroundColor;
-  final Color disabledTextColor;
+  final Color? backgroundColor;
+  final Color? textColor;
+  final Color? disabledBackgroundColor;
+  final Color? disabledTextColor;
   final bool isDisabled;
 
   const ZjButton({
     Key? key,
     this.label = "Button",
     required this.onPressed,
-    this.backgroundColor = ZjColors.primary,
-    this.textColor = ZjLightColors.txtPrimaryWhite,
+    required this.backgroundColor ,
+    this.textColor ,
     this.icon,
-    this.disabledBackgroundColor = ZjColors.black12,
-    this.disabledTextColor = ZjColors.black30,
+    this.disabledBackgroundColor,
+    this.disabledTextColor ,
     this.isDisabled = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final bool isEnabled = !isDisabled && onPressed != null;
-
+    final theme = Theme.of(context).zjTheme;
     return ElevatedButton(
       onPressed: isEnabled ? onPressed : null,
-      style: ElevatedButton.styleFrom(
-        shadowColor: Colors.transparent,
-        elevation: 0.0,
-        backgroundColor: isEnabled ? backgroundColor : disabledBackgroundColor,
-        foregroundColor: isEnabled ? textColor : disabledTextColor,
-        padding: const EdgeInsets.symmetric(horizontal: ZjUnits.unit24, vertical: ZjUnits.unit10),
-        minimumSize: const Size(ZjUnits.unit0, ZjUnits.unit40),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(ZjUnits.rxl),
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.resolveWith<Color>(
+              (Set<WidgetState> states) {
+            // If a background color is passed, always use it
+            if (backgroundColor != null) return backgroundColor!;
+
+            // Otherwise, fallback to state-based color
+            if (states.contains(WidgetState.disabled)) {
+              return theme.buttonDisableBackgroundColor; // disabled color
+            }
+            return ZjLightColors.buttonPrimaryBackgroundColor; // default enabled color
+          },
         ),
-        textStyle:ZjTextVars.txtBold14.copyWith(
-          color: isEnabled ? textColor : disabledTextColor,
-        ),
-        // textStyle: TextStyle(
-        //   fontFamily: 'zain',
-        //   fontSize: 14,
-        //   fontWeight: FontWeight.w700,
-        //   color: isEnabled ? textColor : disabledTextColor,
-        // ),
+        //foregroundColor: MaterialStateProperty.all(Colors.white), // text/icon color
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -88,15 +83,14 @@ class ZjPrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).zjTheme;
     return ZjButton(
       label: label,
       onPressed: onPressed,
+      backgroundColor: theme.buttonPrimaryBackgroundColor,
       icon: icon,
-      backgroundColor: ZjColors.primary, // brand color
-      textColor: ZjLightColors.txtPrimaryWhite,
-      isDisabled: isDisabled,
-      disabledBackgroundColor : ZjColors.black12,
-      disabledTextColor : ZjColors.black30,
+      textColor: ZjLightColors.buttonText,
+      isDisabled: isDisabled
     );
   }
 }
@@ -117,12 +111,14 @@ class ZjSecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).zjTheme;
+print(theme.buttonSecondaryBackgroundColor);
     return ZjButton(
       label: label,
       onPressed: onPressed,
       icon: icon,
-      backgroundColor: ZjColors.secondary,
-      textColor: ZjLightColors.txtPrimaryWhite,
+      backgroundColor: theme.buttonSecondaryBackgroundColor,
+      textColor: ZjLightColors.buttonText,
       isDisabled: isDisabled,
       disabledBackgroundColor : ZjColors.black12,
       disabledTextColor : ZjColors.black30,

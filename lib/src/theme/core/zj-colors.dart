@@ -89,6 +89,16 @@ class ZjLightColors {
   static const Color dividerTextColor = ZjColors.black;
   static const Color dividerStrokeColor = ZjColors.black8;
   static const Color icon = ZjColors.black;
+
+  //Button
+  static const Color buttonPrimaryBackgroundColor = ZjColors.primary;
+  static const Color buttonText = ZjColors.white;
+
+  static const Color buttonSecondaryBackgroundColor = ZjColors.secondary;
+
+
+  static const Color buttonDisableBackgroundColor = ZjColors.primary;
+  static const Color buttonDisableText = ZjColors.white;
 }
 
 class ZjDarkColors {

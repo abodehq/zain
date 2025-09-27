@@ -7,12 +7,18 @@ import 'package:zain/zain.dart';
 class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
   final ZjZigzagTheme zigzagTheme;
   final Color dividerTextColor;
+  final Color buttonPrimaryBackgroundColor;
+  final Color buttonSecondaryBackgroundColor;
+  final Color buttonDisableBackgroundColor;
   //final ZjButtonTheme buttonTheme;
   // Add more themes here as needed
 
   const ZjThemeExtension({
     required this.zigzagTheme,
     required this.dividerTextColor,
+    required this.buttonPrimaryBackgroundColor,
+    required this.buttonSecondaryBackgroundColor,
+    required this.buttonDisableBackgroundColor,
    // required this.buttonTheme,
   });
 
@@ -25,6 +31,9 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     return ZjThemeExtension(
       zigzagTheme: zigzagTheme ?? this.zigzagTheme,
       dividerTextColor: dividerTextColor ?? this.dividerTextColor,
+      buttonPrimaryBackgroundColor: buttonPrimaryBackgroundColor ?? this.buttonSecondaryBackgroundColor,
+      buttonSecondaryBackgroundColor: buttonSecondaryBackgroundColor ?? this.buttonSecondaryBackgroundColor,
+      buttonDisableBackgroundColor: buttonDisableBackgroundColor ?? this.buttonSecondaryBackgroundColor,
       //buttonTheme: buttonTheme ?? this.buttonTheme,
     );
   }
@@ -35,6 +44,9 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     return ZjThemeExtension(
       zigzagTheme: zigzagTheme.lerp(other.zigzagTheme, t),
       dividerTextColor: Color.lerp(dividerTextColor, other.dividerTextColor, t)!,
+      buttonPrimaryBackgroundColor: Color.lerp(buttonPrimaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
+      buttonSecondaryBackgroundColor: Color.lerp(buttonSecondaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
+      buttonDisableBackgroundColor: Color.lerp(buttonDisableBackgroundColor, other.buttonDisableBackgroundColor, t)!,
       //buttonTheme: buttonTheme.lerp(other.buttonTheme, t),
     );
   }
