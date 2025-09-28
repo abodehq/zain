@@ -28,7 +28,7 @@ class ZjRadio<T> extends StatelessWidget {
             // ✅ no groupValue, RadioGroup ancestor handles it
            // activeColor: activeColor ?? Theme.of(context).colorScheme.primary,
           ),
-          const SizedBox(width: 0),
+          const SizedBox(width: 6),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
