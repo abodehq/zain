@@ -93,12 +93,14 @@ class ZjLightColors {
   //Button
   static const Color buttonPrimaryBackgroundColor = ZjColors.primary;
   static const Color buttonText = ZjColors.white;
-
   static const Color buttonSecondaryBackgroundColor = ZjColors.secondary;
-
-
   static const Color buttonDisableBackgroundColor = ZjColors.primary;
   static const Color buttonDisableText = ZjColors.white;
+
+  //radio buttons
+  static const Color radioButtonSelectedColor = ZjColors.primary;
+  static const Color radioButtonDefaultColor = ZjColors.black70;
+  static const Color radioButtonDisableColor = ZjColors.black24;
 }
 
 class ZjDarkColors {

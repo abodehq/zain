@@ -10,6 +10,7 @@ export 'src/theme/components/zj-icons.dart';
 export 'src/theme/components/zj-input.dart';
 export 'src/theme/components/zj-divider.dart';
 export 'src/theme/components/zj-zigzag.dart';
+export 'src/theme/components/zj_radio_button.dart';
 
 
 export 'src/theme/theme_extension/zj_theme_extension.dart';

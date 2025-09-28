@@ -14,6 +14,42 @@ class ZjTheme {
           color: ZjLightColors.dividerStrokeColor,
           thickness: 1,
         ),
+
+        radioTheme: RadioThemeData(
+          splashRadius: 18,
+          //visualDensity: VisualDensity.compact,
+          visualDensity:VisualDensity.compact,
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap, // smaller touch area
+          fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
+            if (states.contains(WidgetState.selected)) {
+              return ZjLightColors.radioButtonSelectedColor; // when selected
+            }
+            if (states.contains(WidgetState.disabled)) {
+              return ZjLightColors.radioButtonDisableColor; // when disabled
+            }
+            return ZjLightColors.radioButtonDefaultColor; // default (unselected)
+          }),
+          // overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+          //   if (states.contains(WidgetState.hovered)) {
+          //     return ZjColors.secondary;
+          //   }
+          //   if (states.contains(WidgetState.focused)) {
+          //     return ZjColors.third;
+          //   }
+          //   if (states.contains(WidgetState.pressed)) {
+          //     return ZjColors.error;
+          //   }
+          //   return null;
+          // }),
+          //materialTapTargetSize: MaterialTapTargetSize.shrinkWrap, // tighter spacing if needed
+          //visualDensity: VisualDensity.compact, // smaller radio buttons
+
+        ),
+        listTileTheme: const ListTileThemeData(
+          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          iconColor: Colors.blue,
+          textColor: Colors.black,
+        ),
         scaffoldBackgroundColor: ZjLightColors.screenPrimaryBackground,
         fontFamily: "zain",
         // textTheme: const TextTheme(
