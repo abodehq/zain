@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 
 class ZjRadio<T> extends StatelessWidget {
   final T value;
-  final Widget title; // 👈 custom text widget
+  final Widget title;
   final Widget? subtitle;
-  //final Color? activeColor;
-
   const ZjRadio({
     super.key,
     required this.value,
     required this.title,
     this.subtitle,
-    //this.activeColor,
   });
 
   @override

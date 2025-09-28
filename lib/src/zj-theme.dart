@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zain/zain.dart';
 
-
 class ZjTheme {
   ZjTheme._();
 
@@ -10,49 +9,44 @@ class ZjTheme {
         useMaterial3: true,
         brightness: Brightness.light,
         primaryColor: ZjColors.primary,
-        dividerTheme: const DividerThemeData(
-          color: ZjLightColors.dividerStrokeColor,
-          thickness: 1,
-        ),
-        radioTheme: ZjRadioButtonTheme.lightRadioButtonTheme,
-        listTileTheme: const ListTileThemeData(
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          iconColor: Colors.blue,
-          textColor: Colors.black,
-        ),
         scaffoldBackgroundColor: ZjLightColors.screenPrimaryBackground,
         fontFamily: "zain",
-        textTheme: ThemeData.light().textTheme
-            .apply(
-          bodyColor: ZjColors.black87,
-          displayColor: ZjColors.black87,
-
-        ),
-        //     .copyWith(
-        //   bodyLarge: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.red),
-        // ),
-
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ZjButtonTheme.lightButtonTheme, // your global style
-        ),
-        inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
-        iconTheme: const IconThemeData(
-          color: ZjColors.black54, // Light theme icon color
-          size: 24,
-        ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: ZjColors.primary,
           primary: ZjColors.primary,
           secondary: ZjColors.secondary,
           error: ZjColors.error,
         ),
+        textTheme: ZjTextTheme.lightTextTheme,
+        inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ZjButtonTheme.lightButtonTheme, // your global style
+        ),
+        radioTheme: ZjRadioButtonTheme.lightRadioButtonTheme,
+        switchTheme: ZjSwitchTheme.lightSwitchTheme,
+        listTileTheme: const ListTileThemeData(
+          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          iconColor: Colors.blue,
+          textColor: Colors.black,
+        ),
+        dividerTheme: const DividerThemeData(
+          color: ZjLightColors.dividerStrokeColor,
+          thickness: 1,
+        ),
+        iconTheme: const IconThemeData(
+          color: ZjColors.black54, // Light theme icon color
+          size: 24,
+        ),
       ).copyWith(
         extensions: <ThemeExtension<dynamic>>[
           const ZjThemeExtension(
             dividerTextColor: ZjLightColors.dividerTextColor,
-            buttonPrimaryBackgroundColor: ZjLightColors.buttonPrimaryBackgroundColor,
-            buttonSecondaryBackgroundColor: ZjLightColors.buttonSecondaryBackgroundColor,
-            buttonDisableBackgroundColor: ZjLightColors.buttonDisableBackgroundColor,
+            buttonPrimaryBackgroundColor:
+                ZjLightColors.buttonPrimaryBackgroundColor,
+            buttonSecondaryBackgroundColor:
+                ZjLightColors.buttonSecondaryBackgroundColor,
+            buttonDisableBackgroundColor:
+                ZjLightColors.buttonDisableBackgroundColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,
@@ -84,12 +78,11 @@ class ZjTheme {
         //   headlineSmall: TextStyle(fontSize: 14,color: ZjColors.primary,fontWeight: FontWeight.w700),
         // ),
         // Text styles for TextFormField
-        textTheme: ThemeData.light().textTheme
-            .apply(
+        textTheme: ThemeData.light().textTheme.apply(
           bodyColor: ZjColors.white87,
           displayColor: ZjColors.white87,
-
         ),
+
         // textTheme: const TextTheme(
         //   bodyLarge: TextStyle(
         //     fontSize: 14,
@@ -98,13 +91,11 @@ class ZjTheme {
         //     height: 1.5, // line-height equivalent
         //   ),
         // ),
-
         inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
         iconTheme: const IconThemeData(
           color: ZjDarkColors.icon, // Light theme icon color
           size: 24,
         ),
-
 
         colorScheme: ColorScheme.fromSeed(
           seedColor: ZjColors.primary,
@@ -116,9 +107,12 @@ class ZjTheme {
         extensions: <ThemeExtension<dynamic>>[
           const ZjThemeExtension(
             dividerTextColor: ZjDarkColors.dividerTextColor,
-            buttonPrimaryBackgroundColor: ZjLightColors.buttonPrimaryBackgroundColor,
-            buttonSecondaryBackgroundColor: ZjLightColors.buttonSecondaryBackgroundColor,
-            buttonDisableBackgroundColor: ZjLightColors.buttonDisableBackgroundColor,
+            buttonPrimaryBackgroundColor:
+                ZjLightColors.buttonPrimaryBackgroundColor,
+            buttonSecondaryBackgroundColor:
+                ZjLightColors.buttonSecondaryBackgroundColor,
+            buttonDisableBackgroundColor:
+                ZjLightColors.buttonDisableBackgroundColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,
