@@ -101,6 +101,14 @@ class ZjLightColors {
   static const Color radioButtonSelectedColor = ZjColors.primary;
   static const Color radioButtonDefaultColor = ZjColors.black70;
   static const Color radioButtonDisableColor = ZjColors.black24;
+
+  //checkbox buttons
+  static const Color checkboxButtonSelectedColor = ZjColors.primary;
+  static const Color checkboxButtonDefaultColor = ZjColors.white;
+  static const Color checkboxButtonDisableColor = ZjColors.black24;
+  static const Color checkboxButtonBorderSelectedColor = ZjColors.primary;
+  static const Color checkboxButtonBorderColor = ZjColors.black70;
+  static const Color checkboxButtonBorderDisableColor = ZjColors.black24;
 }
 
 class ZjDarkColors {

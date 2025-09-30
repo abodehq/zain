@@ -23,6 +23,7 @@ class ZjTheme {
           style: ZjButtonTheme.lightButtonTheme, // your global style
         ),
         radioTheme: ZjRadioButtonTheme.lightRadioButtonTheme,
+        checkboxTheme: ZjCheckboxButtonTheme.lightCheckboxButtonTheme,
         switchTheme: ZjSwitchTheme.lightSwitchTheme,
         listTileTheme: const ListTileThemeData(
           contentPadding: EdgeInsets.symmetric(horizontal: 0),
