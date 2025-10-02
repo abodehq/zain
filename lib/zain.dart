@@ -12,6 +12,8 @@ export 'src/theme/components/zj-divider.dart';
 export 'src/theme/components/zj-zigzag.dart';
 export 'src/theme/components/zj_radio_button.dart';
 export 'src/theme/components/zj_check_box_button.dart';
+export 'src/theme/components/zj_drop_down.dart';
+export 'src/theme/components/zj_drop_down_bottom_sheet.dart';
 
 
 export 'src/theme/theme_extension/zj_theme_extension.dart';
