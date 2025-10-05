@@ -17,31 +17,33 @@ class ZjScreenWithActionButtonWrapper extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        bottom: false, // 👈 Avoid double padding with bottomNavigationBar
+        bottom: false, // Avoid double padding with bottomNavigationBar
         child: Padding(
           padding: const EdgeInsets.all(
             ZjComponentsUnits.screenWithActionButtonPadding,
           ),
-          // 👇 Added LayoutBuilder to make scroll + full height work together
           child: LayoutBuilder(
             builder: (context, constraints) {
-              return SingleChildScrollView(
+              return ListView(
                 physics: const BouncingScrollPhysics(),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: Container(
-                    //alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: theme.screenWithActionButtonBackgroundColor,
-                      borderRadius: BorderRadius.circular(ZjUnits.rmd),
-                      border: Border.all(
-                        color: theme.screenWithActionButtonBorderColor,
-                        width: 1,
+                shrinkWrap: true,
+                children: [
+                  ConstrainedBox(
+                    constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                    child: Container(
+                      //alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: theme.screenWithActionButtonBackgroundColor,
+                        borderRadius: BorderRadius.circular(ZjUnits.rmd),
+                        border: Border.all(
+                          color: theme.screenWithActionButtonBorderColor,
+                          width: 1,
+                        ),
                       ),
+                      child: child,
                     ),
-                    child: child,
                   ),
-                ),
+                ],
               );
             },
           ),

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:zain/zain.dart';
 
 
+import 'package:flutter/material.dart';
+import 'package:zain/zain.dart';
+
 class ZjButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String label;
@@ -16,11 +19,11 @@ class ZjButton extends StatelessWidget {
     Key? key,
     this.label = "Button",
     required this.onPressed,
-    required this.backgroundColor ,
-    this.textColor ,
+    required this.backgroundColor,
+    this.textColor,
     this.icon,
     this.disabledBackgroundColor,
-    this.disabledTextColor ,
+    this.disabledTextColor,
     this.isDisabled = false,
   }) : super(key: key);
 
@@ -28,36 +31,41 @@ class ZjButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isEnabled = !isDisabled && onPressed != null;
     final theme = Theme.of(context).zjTheme;
+
     return ElevatedButton(
       onPressed: isEnabled ? onPressed : null,
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.resolveWith<Color>(
               (Set<WidgetState> states) {
-            // If a background color is passed, always use it
             if (backgroundColor != null) return backgroundColor!;
-
-            // Otherwise, fallback to state-based color
             if (states.contains(WidgetState.disabled)) {
-              return theme.buttonDisableBackgroundColor; // disabled color
+              return disabledBackgroundColor ?? theme.buttonDisableBackgroundColor;
             }
-            return ZjLightColors.buttonPrimaryBackgroundColor; // default enabled color
+            return ZjLightColors.buttonPrimaryBackgroundColor;
           },
         ),
-        //foregroundColor: MaterialStateProperty.all(Colors.white), // text/icon color
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (icon != null) ...[
-            Icon(icon, size: ZjUnits.unit18, color: isEnabled ? textColor : disabledTextColor),
+            Icon(
+              icon,
+              size: ZjUnits.unit18,
+              color: isEnabled ? textColor : disabledTextColor,
+            ),
             const SizedBox(width: ZjUnits.unit4),
           ],
-          Text(
-            label,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: isEnabled ? textColor : disabledTextColor,
+          Flexible(
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis, // truncate long text
+              maxLines: 1,
+              style: TextStyle(
+                color: isEnabled ? textColor : disabledTextColor,
+              ),
             ),
           ),
         ],
@@ -65,7 +73,6 @@ class ZjButton extends StatelessWidget {
     );
   }
 }
-
 
 class ZjPrimaryButton extends StatelessWidget {
   final String label;
