@@ -27,6 +27,8 @@ export 'src/theme/styles/zj_text_theme.dart';
 export 'src/theme/styles/zj_switch_theme.dart';
 
 //screens
-export 'src/layout/zj_screen_with_action_button.dart';
+export 'src/layout/screens/zj_screen_with_action_button.dart';
+//app bars
+export 'src/layout/app_bars/zj_app_bar_with_actions.dart';
 
 

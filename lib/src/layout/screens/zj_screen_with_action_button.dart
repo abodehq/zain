@@ -16,6 +16,17 @@ class ZjScreenWithActionButtonWrapper extends StatelessWidget {
     final theme = Theme.of(context).zjTheme;
 
     return Scaffold(
+      appBar:  const ZjAppBar(
+      title: 'Zain eShop',
+      actions: [
+            Icon(ZjIcons.menu),
+            //SizedBox(width: 8),
+            Icon(ZjIcons.z079),
+            //SizedBox(width: 8),
+          ],
+        ),
+
+      //AppBar(title: Text("hi all")) ,
       body: SafeArea(
         bottom: false, // Avoid double padding with bottomNavigationBar
         child: Padding(

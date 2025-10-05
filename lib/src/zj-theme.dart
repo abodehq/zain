@@ -17,6 +17,22 @@ class ZjTheme {
           secondary: ZjColors.secondary,
           error: ZjColors.error,
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: ZjColors.primary, // your custom background
+          elevation: 0, // flat style
+          toolbarHeight: 264.0,
+          centerTitle: false,
+          titleTextStyle: TextStyle(
+            color: ZjColors.white,
+            fontSize: ZjUnits.unit20,
+            //fontWeight: ZjUnits.,
+          ),
+          titleSpacing:0,
+          leadingWidth: 48,
+          iconTheme: IconThemeData(
+            color: ZjColors.white, // color of back arrow and other icons
+          ),
+        ),
         textTheme: ZjTextTheme.lightTextTheme,
         inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
         elevatedButtonTheme: ElevatedButtonThemeData(
