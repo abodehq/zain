@@ -48,6 +48,12 @@ class ZjTheme {
                 ZjLightColors.buttonSecondaryBackgroundColor,
             buttonDisableBackgroundColor:
                 ZjLightColors.buttonDisableBackgroundColor,
+            screenWithActionButtonBackgroundColor:
+                ZjLightColors.screenWithActionButtonBackgroundColor,
+            screenWithActionButtonBorderColor:
+                ZjLightColors.screenWithActionButtonBorderColor,
+            screenWithActionButtonContainerColor:
+                ZjLightColors.screenWithActionButtonContainerColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,
@@ -114,6 +120,13 @@ class ZjTheme {
                 ZjLightColors.buttonSecondaryBackgroundColor,
             buttonDisableBackgroundColor:
                 ZjLightColors.buttonDisableBackgroundColor,
+
+            screenWithActionButtonBackgroundColor:
+              ZjLightColors.screenWithActionButtonBackgroundColor,
+            screenWithActionButtonBorderColor:
+              ZjLightColors.screenWithActionButtonBorderColor,
+            screenWithActionButtonContainerColor:
+              ZjLightColors.screenWithActionButtonContainerColor,
             zigzagTheme: ZjZigzagTheme(
               zigzagHeight: 12,
               zigzagWidth: 18,

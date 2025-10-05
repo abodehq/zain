@@ -7,9 +7,16 @@ import 'package:zain/zain.dart';
 class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
   final ZjZigzagTheme zigzagTheme;
   final Color dividerTextColor;
+
+  //buttons
   final Color buttonPrimaryBackgroundColor;
   final Color buttonSecondaryBackgroundColor;
   final Color buttonDisableBackgroundColor;
+
+  //Screen with Action Button
+  final Color screenWithActionButtonBackgroundColor;
+  final Color screenWithActionButtonBorderColor;
+  final Color screenWithActionButtonContainerColor;
   //final ZjButtonTheme buttonTheme;
   // Add more themes here as needed
 
@@ -19,6 +26,9 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     required this.buttonPrimaryBackgroundColor,
     required this.buttonSecondaryBackgroundColor,
     required this.buttonDisableBackgroundColor,
+    required this.screenWithActionButtonBackgroundColor,
+    required this.screenWithActionButtonBorderColor,
+    required this.screenWithActionButtonContainerColor,
    // required this.buttonTheme,
   });
 
@@ -31,9 +41,12 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     return ZjThemeExtension(
       zigzagTheme: zigzagTheme ?? this.zigzagTheme,
       dividerTextColor: dividerTextColor ?? this.dividerTextColor,
-      buttonPrimaryBackgroundColor: buttonPrimaryBackgroundColor ?? this.buttonSecondaryBackgroundColor,
-      buttonSecondaryBackgroundColor: buttonSecondaryBackgroundColor ?? this.buttonSecondaryBackgroundColor,
-      buttonDisableBackgroundColor: buttonDisableBackgroundColor ?? this.buttonSecondaryBackgroundColor,
+      buttonPrimaryBackgroundColor: buttonPrimaryBackgroundColor ,
+      buttonSecondaryBackgroundColor: buttonSecondaryBackgroundColor ,
+      buttonDisableBackgroundColor: buttonDisableBackgroundColor ,
+      screenWithActionButtonBackgroundColor: screenWithActionButtonBackgroundColor ,
+      screenWithActionButtonBorderColor: screenWithActionButtonBorderColor ,
+      screenWithActionButtonContainerColor: screenWithActionButtonContainerColor,
       //buttonTheme: buttonTheme ?? this.buttonTheme,
     );
   }
@@ -47,6 +60,9 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
       buttonPrimaryBackgroundColor: Color.lerp(buttonPrimaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
       buttonSecondaryBackgroundColor: Color.lerp(buttonSecondaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
       buttonDisableBackgroundColor: Color.lerp(buttonDisableBackgroundColor, other.buttonDisableBackgroundColor, t)!,
+      screenWithActionButtonBackgroundColor: Color.lerp(screenWithActionButtonBackgroundColor, other.screenWithActionButtonBackgroundColor, t)!,
+      screenWithActionButtonBorderColor: Color.lerp(screenWithActionButtonBorderColor, other.screenWithActionButtonBorderColor, t)!,
+      screenWithActionButtonContainerColor: Color.lerp(screenWithActionButtonContainerColor, other.screenWithActionButtonContainerColor, t)!,
       //buttonTheme: buttonTheme.lerp(other.buttonTheme, t),
     );
   }

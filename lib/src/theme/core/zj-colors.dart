@@ -109,6 +109,12 @@ class ZjLightColors {
   static const Color checkboxButtonBorderSelectedColor = ZjColors.primary;
   static const Color checkboxButtonBorderColor = ZjColors.black70;
   static const Color checkboxButtonBorderDisableColor = ZjColors.black24;
+
+  //screens
+  //screen with action button
+  static const Color screenWithActionButtonBackgroundColor = ZjColors.white;
+  static const Color screenWithActionButtonBorderColor = ZjColors.black8;
+  static const Color screenWithActionButtonContainerColor = ZjColors.white;
 }
 
 class ZjDarkColors {
