@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zain/zain.dart';
 
-import 'package:flutter/material.dart';
-
 class ZjAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final VoidCallback? onBack;

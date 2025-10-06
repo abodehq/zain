@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zain/zain.dart';
+
 /// ========= Raw Variations =========
 class ZjTextVars {
   // Font sizes
