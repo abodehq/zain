@@ -13,7 +13,7 @@ class ZjButton extends StatelessWidget {
   final bool isDisabled;
 
   const ZjButton({
-    Key? key,
+    super.key,
     this.label = "Button",
     required this.onPressed,
     required this.backgroundColor,
@@ -22,7 +22,7 @@ class ZjButton extends StatelessWidget {
     this.disabledBackgroundColor,
     this.disabledTextColor,
     this.isDisabled = false,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -79,12 +79,12 @@ class ZjPrimaryButton extends StatelessWidget {
   final bool isDisabled;
 
   const ZjPrimaryButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.onPressed,
     this.icon,
     this.isDisabled = false,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -107,12 +107,12 @@ class ZjSecondaryButton extends StatelessWidget {
   final bool isDisabled;
 
   const ZjSecondaryButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.onPressed,
     this.icon,
     this.isDisabled = false,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../core/zj_color_theme.dart';
-import '../core/zj-colors.dart';
+import '../core/zj_colors.dart';
 
 class ZjLightColors implements ZjColorsTheme {
   ZjLightColors._();

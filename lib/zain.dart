@@ -1,22 +1,22 @@
-library zain;
+// library zain;no need for current version of dart
 
-export 'src/zj-theme.dart';
-export 'src/theme/core/zj-colors.dart';
+export 'src/zj_theme.dart';
+export 'src/theme/core/zj_colors.dart';
 export 'src/theme/core/zj_color_theme.dart';
-export 'src/theme/core/zj-units.dart';
+export 'src/theme/core/zj_units.dart';
 export 'src/theme/core/zj_components_units.dart';
-export 'src/theme/validators/zj-validators.dart';
+export 'src/theme/validators/zj_validators.dart';
 
 //Colors themes (light,Dark,..)
 export 'src/theme/modes/zj_light_theme.dart';
 
 //components
-export 'src/theme/components/zj-text.dart';
-export 'src/theme/components/zj-button.dart';
-export 'src/theme/components/zj-icons.dart';
-export 'src/theme/components/zj-input.dart';
-export 'src/theme/components/zj-divider.dart';
-export 'src/theme/components/zj-zigzag.dart';
+export 'src/theme/components/zj_text.dart';
+export 'src/theme/components/zj_button.dart';
+export 'src/theme/components/zj_icons.dart';
+export 'src/theme/components/zj_input.dart';
+export 'src/theme/components/zj_divider.dart';
+export 'src/theme/components/zj_zigzag.dart';
 export 'src/theme/components/zj_radio_button.dart';
 export 'src/theme/components/zj_check_box_button.dart';
 export 'src/theme/components/zj_drop_down.dart';
@@ -27,8 +27,8 @@ export 'src/theme/theme_extension/zj_theme_extension.dart';
 export 'src/theme/theme_extension/zj_zigzag_theme.dart';
 
 //styles
-export 'src/theme/styles/zj-input-theme.dart';
-export 'src/theme/styles/zj-button-theme.dart';
+export 'src/theme/styles/zj_input_theme.dart';
+export 'src/theme/styles/zj_button_theme.dart';
 export 'src/theme/styles/zj_radio_button_theme.dart';
 export 'src/theme/styles/zj_check_box_button_theme.dart';
 export 'src/theme/styles/zj_text_theme.dart';

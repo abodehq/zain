@@ -9,13 +9,13 @@ class ZjDivider extends StatelessWidget {
   final Color? color;
   final Color? dividerTextColor;
 
-  ZjDivider({
-    Key? key,
+  const ZjDivider({
+    super.key,
     this.label,
     this.height = 2.0,
     this.color,
     this.dividerTextColor,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {

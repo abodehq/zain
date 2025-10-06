@@ -11,15 +11,15 @@ class ZjZigzag extends StatelessWidget {
   final double? strokeWidth;
   final Color? bottomFillColor; // new
 
-  ZjZigzag({
-    Key? key,
+  const ZjZigzag({
+    super.key,
     this.zigzagHeight ,
     this.zigzagWidth ,
     this.fillColor ,
     this.strokeColor ,
     this.strokeWidth ,
     this.bottomFillColor,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {
