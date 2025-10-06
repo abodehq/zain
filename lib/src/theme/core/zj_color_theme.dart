@@ -26,7 +26,7 @@ abstract class ZjColorsTheme {
 
   // Buttons
   Color get buttonPrimaryBackgroundColor;
-  Color get buttonText;
+  Color get buttonTextColor;
   Color get buttonSecondaryBackgroundColor;
   Color get buttonDisableBackgroundColor;
   Color get buttonDisableText;

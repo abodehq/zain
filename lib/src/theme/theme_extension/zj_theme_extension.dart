@@ -11,6 +11,7 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
   final Color buttonPrimaryBackgroundColor;
   final Color buttonSecondaryBackgroundColor;
   final Color buttonDisableBackgroundColor;
+  final Color buttonTextColor;
 
   //Screen with Action Button
   final Color screenWithActionButtonBackgroundColor;
@@ -25,6 +26,7 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     required this.buttonPrimaryBackgroundColor,
     required this.buttonSecondaryBackgroundColor,
     required this.buttonDisableBackgroundColor,
+    required this.buttonTextColor,
     required this.screenWithActionButtonBackgroundColor,
     required this.screenWithActionButtonBorderColor,
     required this.screenWithActionButtonContainerColor,
@@ -43,6 +45,7 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
       buttonPrimaryBackgroundColor: buttonPrimaryBackgroundColor ,
       buttonSecondaryBackgroundColor: buttonSecondaryBackgroundColor ,
       buttonDisableBackgroundColor: buttonDisableBackgroundColor ,
+      buttonTextColor: buttonTextColor ,
       screenWithActionButtonBackgroundColor: screenWithActionButtonBackgroundColor ,
       screenWithActionButtonBorderColor: screenWithActionButtonBorderColor ,
       screenWithActionButtonContainerColor: screenWithActionButtonContainerColor,
@@ -59,6 +62,7 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
       buttonPrimaryBackgroundColor: Color.lerp(buttonPrimaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
       buttonSecondaryBackgroundColor: Color.lerp(buttonSecondaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
       buttonDisableBackgroundColor: Color.lerp(buttonDisableBackgroundColor, other.buttonDisableBackgroundColor, t)!,
+      buttonTextColor: Color.lerp(buttonTextColor, other.buttonTextColor, t)!,
       screenWithActionButtonBackgroundColor: Color.lerp(screenWithActionButtonBackgroundColor, other.screenWithActionButtonBackgroundColor, t)!,
       screenWithActionButtonBorderColor: Color.lerp(screenWithActionButtonBorderColor, other.screenWithActionButtonBorderColor, t)!,
       screenWithActionButtonContainerColor: Color.lerp(screenWithActionButtonContainerColor, other.screenWithActionButtonContainerColor, t)!,

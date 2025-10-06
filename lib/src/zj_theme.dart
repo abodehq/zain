@@ -58,6 +58,7 @@ class ZjTheme {
           buttonPrimaryBackgroundColor: zjColors.buttonPrimaryBackgroundColor,
           buttonSecondaryBackgroundColor: zjColors.buttonSecondaryBackgroundColor,
           buttonDisableBackgroundColor: zjColors.buttonDisableBackgroundColor,
+          buttonTextColor: zjColors.buttonTextColor,
           screenWithActionButtonBackgroundColor: zjColors.screenWithActionButtonBackgroundColor,
           screenWithActionButtonBorderColor: zjColors.screenWithActionButtonBorderColor,
           screenWithActionButtonContainerColor: zjColors.screenWithActionButtonContainerColor,

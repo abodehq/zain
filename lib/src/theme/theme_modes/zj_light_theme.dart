@@ -48,7 +48,7 @@ class ZjLightColors implements ZjColorsTheme {
   @override
   Color get buttonPrimaryBackgroundColor => ZjColors.primary;
   @override
-  Color get buttonText => ZjColors.white;
+  Color get buttonTextColor => ZjColors.white;
   @override
   Color get buttonSecondaryBackgroundColor => ZjColors.secondary;
   @override

@@ -50,7 +50,7 @@ class ZjDarkColors implements ZjColorsTheme {
   @override
   Color get buttonPrimaryBackgroundColor => ZjColors.primary;
   @override
-  Color get buttonText => ZjColors.black;
+  Color get buttonTextColor => ZjColors.black;
   @override
   Color get buttonSecondaryBackgroundColor => ZjColors.secondary;
   @override
