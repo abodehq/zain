@@ -10,7 +10,7 @@ class ZjDarkColors implements ZjColorsTheme {
   @override
   Color get appPrimaryColor => ZjColors.primary;
   @override
-  Color get screenPrimaryBackground => const Color(0xFFF1F1F1);
+  Color get screenPrimaryBackground => ZjColors.primary;
 
   // App bar
   @override
