@@ -11,23 +11,23 @@ class ZjCheckboxButtonTheme {
     fillColor: WidgetStateProperty.resolveWith<Color?>(
           (states) {
         if (states.contains(WidgetState.selected)) {
-          return ZjLightColors.checkboxButtonSelectedColor; // checked fill color
+         // return ZjLightColors.checkboxButtonSelectedColor; // checked fill color
         }
         if (states.contains(WidgetState.disabled)) {
-          return ZjLightColors.checkboxButtonDisableColor; // when disabled
+          //return ZjLightColors.checkboxButtonDisableColor; // when disabled
         }
-        return ZjLightColors.checkboxButtonDefaultColor; // unchecked border color
+       // return ZjLightColors.checkboxButtonDefaultColor; // unchecked border color
       },
     ),
     //checkColor: WidgetStateProperty.all(ZjColors.white), // checkmark color
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        return const BorderSide(color: ZjLightColors.checkboxButtonBorderSelectedColor, width: 2);
+        //return const BorderSide(color: ZjLightColors.checkboxButtonBorderSelectedColor, width: 2);
       }
       if (states.contains(WidgetState.disabled)) {
-        return const BorderSide(color: ZjLightColors.checkboxButtonBorderColor, width: 2);
+        //return const BorderSide(color: ZjLightColors.checkboxButtonBorderColor, width: 2);
       }
-      return const BorderSide(color: ZjLightColors.checkboxButtonBorderColor, width: 2);
+      //return const BorderSide(color: ZjLightColors.checkboxButtonBorderColor, width: 2);
     }),
     // shape: RoundedRectangleBorder(
     //   borderRadius: BorderRadius.circular(4),

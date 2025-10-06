@@ -15,16 +15,18 @@ class ZjButtonTheme {
 
     // background color depending on state
     backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
-      return states.contains(WidgetState.disabled)
-          ? ZjLightColors.buttonDisableBackgroundColor
-          : ZjLightColors.buttonPrimaryBackgroundColor;
+      //return states.contains(WidgetState.disabled)
+         // ? ZjLightColors.buttonDisableBackgroundColor
+          //: ZjLightColors.buttonPrimaryBackgroundColor;
+      return ZjColors.primary;
     }),
 
     // foreground/text color depending on state
     foregroundColor: WidgetStateProperty.resolveWith<Color>((states) {
-      return states.contains(WidgetState.disabled)
-          ? ZjLightColors.buttonDisableText
-          : ZjLightColors.buttonText;
+      //return states.contains(WidgetState.disabled)
+          //? ZjLightColors.buttonDisableText
+         // : ZjLightColors.buttonText;
+      return ZjColors.primary;
     }),
 
     padding: WidgetStateProperty.all(
@@ -43,9 +45,9 @@ class ZjButtonTheme {
     // text style depending on state
     textStyle: WidgetStateProperty.resolveWith<TextStyle>((states) {
       return ZjTextVars.txtBold14.copyWith(
-        color: states.contains(WidgetState.disabled)
-            ? ZjLightColors.buttonDisableText
-            : ZjLightColors.buttonText,
+        //color: states.contains(WidgetState.disabled)
+            //? ZjLightColors.buttonDisableText
+            //: ZjLightColors.buttonText,
       );
     }),
   );

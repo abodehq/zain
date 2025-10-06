@@ -79,48 +79,64 @@ class ZjColors {
   );
 }
 
-class ZjLightColors {
-  static const Color txtBrandPrimary = ZjColors.primary;
-  static const Color txtBrandSecondary = ZjColors.secondary;
-  static const Color txtBrandThird = ZjColors.third;
-  static const Color txtPrimaryBlack = ZjColors.black87;
-  static const Color txtSecondaryBlack = ZjColors.black70;
-  static const Color txtPrimaryWhite = ZjColors.white;
-  static const Color txtSecondaryWhite = ZjColors.white70;
-
-  static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
-
-  static const Color borderPrimary = ZjColors.black8;
-  static const Color dividerTextColor = ZjColors.black;
-  static const Color dividerStrokeColor = ZjColors.black8;
-  static const Color icon = ZjColors.black;
-
-  //Button
-  static const Color buttonPrimaryBackgroundColor = ZjColors.primary;
-  static const Color buttonText = ZjColors.white;
-  static const Color buttonSecondaryBackgroundColor = ZjColors.secondary;
-  static const Color buttonDisableBackgroundColor = ZjColors.primary;
-  static const Color buttonDisableText = ZjColors.white;
-
-  //radio buttons
-  static const Color radioButtonSelectedColor = ZjColors.primary;
-  static const Color radioButtonDefaultColor = ZjColors.black70;
-  static const Color radioButtonDisableColor = ZjColors.black24;
-
-  //checkbox buttons
-  static const Color checkboxButtonSelectedColor = ZjColors.primary;
-  static const Color checkboxButtonDefaultColor = ZjColors.white;
-  static const Color checkboxButtonDisableColor = ZjColors.black24;
-  static const Color checkboxButtonBorderSelectedColor = ZjColors.primary;
-  static const Color checkboxButtonBorderColor = ZjColors.black70;
-  static const Color checkboxButtonBorderDisableColor = ZjColors.black24;
-
-  //screens
-  //screens with action button
-  static const Color screenWithActionButtonBackgroundColor = ZjColors.white;
-  static const Color screenWithActionButtonBorderColor = ZjColors.black8;
-  static const Color screenWithActionButtonContainerColor = ZjColors.white;
-}
+// class ZjLightColors {
+//
+//   static const Color appPrimaryColor = ZjColors.primary;
+//   static const Color screenPrimaryBackground = Color(0xFFF1F1F1);
+//
+//   //app bar
+//   static const Color appBarBackgroundColor = ZjColors.primary;
+//   static const Color appBarTitleColor = ZjColors.white;
+//   static const Color appBarIconColor = ZjColors.white;
+//
+//   static const Color txtBrandPrimary = ZjColors.primary;
+//   static const Color txtBrandSecondary = ZjColors.secondary;
+//   static const Color txtBrandThird = ZjColors.third;
+//   static const Color txtPrimaryBlack = ZjColors.black87;
+//   static const Color txtSecondaryBlack = ZjColors.black70;
+//   static const Color txtPrimaryWhite = ZjColors.white;
+//   static const Color txtSecondaryWhite = ZjColors.white70;
+//
+//
+//
+//   static const Color borderPrimary = ZjColors.black8;
+//   static const Color dividerTextColor = ZjColors.black;
+//   static const Color dividerStrokeColor = ZjColors.black8;
+//   static const Color icon = ZjColors.black;
+//
+//   //Button
+//   static const Color buttonPrimaryBackgroundColor = ZjColors.primary;
+//   static const Color buttonText = ZjColors.white;
+//   static const Color buttonSecondaryBackgroundColor = ZjColors.secondary;
+//   static const Color buttonDisableBackgroundColor = ZjColors.primary;
+//   static const Color buttonDisableText = ZjColors.white;
+//
+//   //radio buttons
+//   static const Color radioButtonSelectedColor = ZjColors.primary;
+//   static const Color radioButtonDefaultColor = ZjColors.black70;
+//   static const Color radioButtonDisableColor = ZjColors.black24;
+//
+//   //checkbox buttons
+//   static const Color checkboxButtonSelectedColor = ZjColors.primary;
+//   static const Color checkboxButtonDefaultColor = ZjColors.white;
+//   static const Color checkboxButtonDisableColor = ZjColors.black24;
+//   static const Color checkboxButtonBorderSelectedColor = ZjColors.primary;
+//   static const Color checkboxButtonBorderColor = ZjColors.black70;
+//   static const Color checkboxButtonBorderDisableColor = ZjColors.black24;
+//
+//   //screens
+//   //screens with action button
+//   static const Color screenWithActionButtonBackgroundColor = ZjColors.white;
+//   static const Color screenWithActionButtonBorderColor = ZjColors.black8;
+//   static const Color screenWithActionButtonContainerColor = ZjColors.white;
+//
+//   //icon
+//   static const Color iconPrimaryColor = ZjColors.black54;
+//
+//   // zigzag
+//   static const Color  zigzagFillColor = ZjColors.white;
+//   static const Color  zigzagStrokeColor = ZjColors.black8;
+// }
 
 class ZjDarkColors {
   static const Color txtBrandPrimary = ZjColors.primary;

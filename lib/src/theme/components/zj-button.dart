@@ -41,7 +41,8 @@ class ZjButton extends StatelessWidget {
             if (states.contains(WidgetState.disabled)) {
               return disabledBackgroundColor ?? theme.buttonDisableBackgroundColor;
             }
-            return ZjLightColors.buttonPrimaryBackgroundColor;
+            return ZjColors.primary;
+            //return ZjLightColors.buttonPrimaryBackgroundColor;
           },
         ),
       ),
@@ -96,7 +97,7 @@ class ZjPrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       backgroundColor: theme.buttonPrimaryBackgroundColor,
       icon: icon,
-      textColor: ZjLightColors.buttonText,
+     // textColor: ZjLightColors.buttonText,
       isDisabled: isDisabled
     );
   }
@@ -125,7 +126,7 @@ print(theme.buttonSecondaryBackgroundColor);
       onPressed: onPressed,
       icon: icon,
       backgroundColor: theme.buttonSecondaryBackgroundColor,
-      textColor: ZjLightColors.buttonText,
+      //textColor: ZjLightColors.buttonText,
       isDisabled: isDisabled,
       disabledBackgroundColor : ZjColors.black12,
       disabledTextColor : ZjColors.black30,

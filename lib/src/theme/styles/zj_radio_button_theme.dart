@@ -10,12 +10,12 @@ class ZjRadioButtonTheme {
     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
     fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
       if (states.contains(WidgetState.selected)) {
-        return ZjLightColors.radioButtonSelectedColor; // when selected
+       // return ZjLightColors.radioButtonSelectedColor; // when selected
       }
       if (states.contains(WidgetState.disabled)) {
-        return ZjLightColors.radioButtonDisableColor; // when disabled
+       // return ZjLightColors.radioButtonDisableColor; // when disabled
       }
-      return ZjLightColors.radioButtonDefaultColor; // default (unselected)
+      //return ZjLightColors.radioButtonDefaultColor; // default (unselected)
     }),
 
     // overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
