@@ -7,6 +7,9 @@ export 'src/theme/core/zj_units.dart';
 export 'src/theme/core/zj_components_units.dart';
 export 'src/theme/validators/zj_validators.dart';
 
+//enums
+export 'src/theme/enums/zj_theme_type.dart';
+
 //Colors themes (light,Dark,..)
 export 'src/theme/modes/zj_light_theme.dart';
 
@@ -25,6 +28,7 @@ export 'src/theme/components/zj_drop_down_bottom_sheet.dart';
 //extension
 export 'src/theme/theme_extension/zj_theme_extension.dart';
 export 'src/theme/theme_extension/zj_zigzag_theme.dart';
+export 'src/zj_theme_manager.dart';
 
 //styles
 export 'src/theme/styles/zj_input_theme.dart';
