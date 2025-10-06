@@ -138,19 +138,19 @@ class ZjColors {
 //   static const Color  zigzagStrokeColor = ZjColors.black8;
 // }
 
-class ZjDarkColors {
-  static const Color txtBrandPrimary = ZjColors.primary;
-  static const Color txtBrandSecondary = ZjColors.secondary;
-  static const Color txtBrandThird = ZjColors.third;
-  static const Color txtPrimaryBlack = ZjColors.black87;
-  static const Color txtSecondaryBlack = ZjColors.black70;
-  static const Color txtPrimaryWhite = ZjColors.white;
-  static const Color txtSecondaryWhite = ZjColors.white70;
-
-  static const Color screenPrimaryBackground = Color(0xFF000000);
-
-  static const Color borderPrimary = ZjColors.white8;
-  static const Color dividerTextColor = ZjColors.white;
-  static const Color dividerStrokeColor = ZjColors.white87;
-  static const Color icon = ZjColors.white;
-}
+// class ZjDarkColors {
+//   static const Color txtBrandPrimary = ZjColors.primary;
+//   static const Color txtBrandSecondary = ZjColors.secondary;
+//   static const Color txtBrandThird = ZjColors.third;
+//   static const Color txtPrimaryBlack = ZjColors.black87;
+//   static const Color txtSecondaryBlack = ZjColors.black70;
+//   static const Color txtPrimaryWhite = ZjColors.white;
+//   static const Color txtSecondaryWhite = ZjColors.white70;
+//
+//   static const Color screenPrimaryBackground = Color(0xFF000000);
+//
+//   static const Color borderPrimary = ZjColors.white8;
+//   static const Color dividerTextColor = ZjColors.white;
+//   static const Color dividerStrokeColor = ZjColors.white87;
+//   static const Color icon = ZjColors.white;
+// }

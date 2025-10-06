@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zain/zain.dart';
 final Map<ZjThemeType, ThemeData> zjThemes = {
   ZjThemeType.light: ZjTheme.getTheme(ZjLightColors.instance),
-  // ZjThemeType.dark: ZjTheme.getTheme(ZjDarkColors.instance),
+  ZjThemeType.dark: ZjTheme.getTheme(ZjDarkColors.instance),
   // ZjThemeType.blue: ZjTheme.getTheme(ZjBlueColors.instance),
   // ZjThemeType.green: ZjTheme.getTheme(ZjGreenColors.instance),
   // ZjThemeType.corporate: ZjTheme.getTheme(ZjCorporateColors.instance),

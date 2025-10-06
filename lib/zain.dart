@@ -11,7 +11,8 @@ export 'src/theme/validators/zj_validators.dart';
 export 'src/theme/enums/zj_theme_type.dart';
 
 //Colors themes (light,Dark,..)
-export 'src/theme/modes/zj_light_theme.dart';
+export 'src/theme/theme_modes/zj_light_theme.dart';
+export 'src/theme/theme_modes/zj_dark_theme.dart';
 
 //components
 export 'src/theme/components/zj_text.dart';
