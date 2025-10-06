@@ -5,6 +5,8 @@ import '../core/zj_colors.dart';
 class ZjDarkColors implements ZjColorsTheme {
   ZjDarkColors._();
   static final ZjDarkColors instance = ZjDarkColors._();
+
+
   @override
   Color get appPrimaryColor => ZjColors.primary;
   @override
