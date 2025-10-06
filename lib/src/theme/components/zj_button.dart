@@ -38,7 +38,6 @@ class ZjButton extends StatelessWidget {
             if (states.contains(WidgetState.disabled)) {
               return disabledBackgroundColor ?? theme.buttonDisableBackgroundColor;
             }
-            //return ZjColors.primary;
             return theme.buttonPrimaryBackgroundColor;
           },
         ),

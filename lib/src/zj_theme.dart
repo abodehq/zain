@@ -33,7 +33,7 @@ class ZjTheme {
       textTheme: ZjTextTheme.lightTextTheme,
       inputDecorationTheme: ZjInputTheme.lightInputDecorationTheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ZjButtonTheme.lightButtonTheme,
+        style: ZjButtonTheme.ButtonTheme(zjColors),
       ),
       radioTheme: ZjRadioButtonTheme.lightRadioButtonTheme,
       checkboxTheme: ZjCheckboxButtonTheme.lightCheckboxButtonTheme,
