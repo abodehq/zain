@@ -7,7 +7,7 @@ class ZjButtonTheme {
   // Example variables (keep your originals)
   static const bool isEnabled = true;
 
-  static ButtonStyle ButtonTheme(ZjColorsTheme zjColors) {
+  static ButtonStyle buttonTheme(ZjColorsTheme zjColors) {
     return ButtonStyle(
       shadowColor: WidgetStateProperty.all(Colors.transparent),
       elevation: WidgetStateProperty.all(0.0),

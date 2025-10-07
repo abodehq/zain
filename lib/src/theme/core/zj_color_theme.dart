@@ -18,11 +18,20 @@ abstract class ZjColorsTheme {
   Color get txtPrimaryWhite;
   Color get txtSecondaryWhite;
 
+
   // Borders / Dividers
   Color get borderPrimary;
   Color get dividerTextColor;
   Color get dividerStrokeColor;
   Color get icon;
+
+  //Inputs
+  Color get inputPrimaryBackgroundColor;
+  Color get inputFocusBackgroundColor;
+  Color get inputDisableBackgroundColor;
+  Color get inputBorderColor;
+  Color get inputBorderFocusColor;
+  Color get inputDisableBorderColor;
 
   // Buttons
   Color get buttonPrimaryBackgroundColor;
