@@ -101,9 +101,9 @@ class _ZjInputState extends State<ZjInput> {
                 validator: widget.validator,
                 inputFormatters: widget.inputFormatters,
                 decoration: InputDecoration(
-                  hintText: "Enter something", // ✅ Always shows when empty
-                  filled: true,
-                  fillColor: _getFillColor(isFocused, hasText), // ✅ now depends on text too
+                 // hintText: "Enter something", // ✅ Always shows when empty
+                  //filled: true,
+                 // fillColor: _getFillColor(isFocused, hasText), // ✅ now depends on text too
                   prefixIcon: widget.startIcon != null
                       ? Icon(widget.startIcon, size: 24.0)
                       : null,

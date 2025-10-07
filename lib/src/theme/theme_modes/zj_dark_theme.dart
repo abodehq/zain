@@ -32,9 +32,9 @@ class ZjDarkColors implements ZjColorsTheme {
   @override
   Color get txtSecondaryBlack => ZjColors.white;
   @override
-  Color get txtPrimaryWhite => ZjColors.black;
+  Color get txtPrimaryWhite => ZjColors.white;
   @override
-  Color get txtSecondaryWhite => ZjColors.black;
+  Color get txtSecondaryWhite => ZjColors.white;
 
   // Borders / Dividers
   @override

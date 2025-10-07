@@ -9,6 +9,7 @@ class ZjInputTheme {
   ) {
     return InputDecorationTheme(
       filled: true,
+      //fillColor: Colors.red,
       //fillColor: ZjColors.secondary2, // background
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {

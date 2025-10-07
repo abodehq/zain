@@ -31,6 +31,7 @@ class ZjTheme {
         ),
       ),
       textTheme: ZjTextTheme.lightTextTheme,
+
       inputDecorationTheme: ZjInputTheme.inputTheme(zjColors),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ZjButtonTheme.buttonTheme(zjColors),
