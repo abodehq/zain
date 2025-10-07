@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zain/zain.dart';
 
-
+/// Base Input Component with dynamic fill color
 /// Base Input Component with dynamic fill color
 class ZjInput extends StatefulWidget {
+  final String? label; // 👈 added label
   final String? hintText;
   final IconData? startIcon;
   final IconData? endIcon;
@@ -18,6 +19,7 @@ class ZjInput extends StatefulWidget {
 
   const ZjInput({
     super.key,
+    this.label,
     this.hintText,
     this.startIcon,
     this.endIcon,
@@ -63,12 +65,6 @@ class _ZjInputState extends State<ZjInput> {
     super.dispose();
   }
 
-  Color _getFillColor(bool isFocused, bool hasText) {
-    if (isFocused) return ZjColors.white; // Focused color
-    if (!hasText) return ZjColors.black2; // Empty background
-    return ZjColors.secondary2; // Filled background
-  }
-
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<bool>(
@@ -77,44 +73,57 @@ class _ZjInputState extends State<ZjInput> {
         return ValueListenableBuilder<bool>(
           valueListenable: _hasText,
           builder: (context, hasText, _) {
-            return Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                // ✅ Soft glow only when focused
-                boxShadow: isFocused
-                    ? [
-                  BoxShadow(
-                    color: ZjColors.secondary12,
-                    blurRadius: 0,
-                    spreadRadius: 4,
-                    offset: Offset.zero,
+            final theme = Theme.of(context);
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (widget.label != null) ...[
+                  Text(
+                    widget.label!,
+                    style: TextStyle(
+                      color: theme.inputDecorationTheme.labelStyle?.color,
+                      fontSize: theme.inputDecorationTheme.labelStyle?.fontSize,
+                    ),
+                  ), // 👈 fixed label above
+                  const SizedBox(height: 6),
+                ],
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: isFocused
+                        ? [
+                            BoxShadow(
+                              color: ZjColors.secondary12,
+                              blurRadius: 0,
+                              spreadRadius: 4,
+                              offset: Offset.zero,
+                            ),
+                          ]
+                        : [],
                   ),
-                ]
-                    : [],
-              ),
-              child: TextFormField(
-                focusNode: _focusNode,
-                controller: widget.controller,
-                keyboardType: widget.keyboardType,
-                textInputAction: widget.textInputAction,
-                obscureText: widget.obscureText,
-                validator: widget.validator,
-                inputFormatters: widget.inputFormatters,
-                decoration: InputDecoration(
-                 // hintText: "Enter something", // ✅ Always shows when empty
-                  //filled: true,
-                 // fillColor: _getFillColor(isFocused, hasText), // ✅ now depends on text too
-                  prefixIcon: widget.startIcon != null
-                      ? Icon(widget.startIcon, size: 24.0)
-                      : null,
-                  suffixIcon: widget.endIcon != null
-                      ? IconButton(
-                    icon: Icon(widget.endIcon, size: 18.0),
-                    onPressed: widget.onEndIconPressed,
-                  )
-                      : null,
+                  child: TextFormField(
+                    focusNode: _focusNode,
+                    controller: widget.controller,
+                    keyboardType: widget.keyboardType,
+                    textInputAction: widget.textInputAction,
+                    obscureText: widget.obscureText,
+                    validator: widget.validator,
+                    inputFormatters: widget.inputFormatters,
+                    decoration: InputDecoration(
+                      hintText: widget.hintText ?? "Enter something",
+                      prefixIcon: widget.startIcon != null
+                          ? Icon(widget.startIcon, size: 24.0)
+                          : null,
+                      suffixIcon: widget.endIcon != null
+                          ? IconButton(
+                              icon: Icon(widget.endIcon, size: 18.0),
+                              onPressed: widget.onEndIconPressed,
+                            )
+                          : null,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             );
           },
         );
@@ -122,7 +131,6 @@ class _ZjInputState extends State<ZjInput> {
     );
   }
 }
-
 
 /// Email Input
 class ZjEmailInput extends StatelessWidget {
@@ -160,7 +168,7 @@ class ZjPhoneInput extends StatelessWidget {
       validator: ZjValidator.phone,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly, // only numbers allowed
-        LengthLimitingTextInputFormatter(15),   // max length
+        LengthLimitingTextInputFormatter(15), // max length
       ],
     );
   }
@@ -197,7 +205,6 @@ class ZjPhoneInput extends StatelessWidget {
 //   }
 // }
 //
-
 
 class ZjPasswordInput extends StatefulWidget {
   final TextEditingController? controller;

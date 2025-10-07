@@ -39,6 +39,7 @@ class ZjInputTheme {
           color: zjColors.inputBorderFocusColor, // change border on focus
         ),
       ),
+      labelStyle: TextStyle(color: zjColors.inputLabelColor,fontSize: 14),
       hintStyle: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
