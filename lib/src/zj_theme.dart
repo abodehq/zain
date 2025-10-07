@@ -36,8 +36,8 @@ class ZjTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ZjButtonTheme.buttonTheme(zjColors),
       ),
-      radioTheme: ZjRadioButtonTheme.lightRadioButtonTheme,
-      checkboxTheme: ZjCheckboxButtonTheme.lightCheckboxButtonTheme,
+      radioTheme: ZjRadioButtonTheme.radioButtonTheme(zjColors),
+      checkboxTheme: ZjCheckboxButtonTheme.checkboxButtonTheme(zjColors),
       switchTheme: ZjSwitchTheme.lightSwitchTheme,
       listTileTheme: const ListTileThemeData(
         contentPadding: EdgeInsets.symmetric(horizontal: 0),
