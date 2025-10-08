@@ -14,7 +14,7 @@ class ZjComponentsUnits {
   static const double inputStartIconSize = ZjUnits.unit24;
   static const double inputEndIconSize = ZjUnits.unit18;
   static const double inputTopLabelPadding = ZjUnits.unit6;
-  static const double inputVerticalPadding = ZjUnits.unit10;
+  static const double inputVerticalPadding = ZjUnits.unit92;
   static const double inputHorizontalPadding = ZjUnits.unit8;
   static const double inputIconHorizontalPadding = ZjUnits.unit12;
 
