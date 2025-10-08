@@ -44,7 +44,7 @@ class ZjLightColors implements ZjColorsTheme {
   @override
   Color get dividerTextColor => ZjColors.black;
   @override
-  Color get dividerStrokeColor => ZjColors.black8;
+  Color get dividerStrokeColor => ZjColors.black12;
   @override
   Color get icon => ZjColors.black;
 

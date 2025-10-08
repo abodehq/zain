@@ -48,6 +48,7 @@ class ZjTheme {
         iconColor: Colors.blue,
         textColor: Colors.black,
       ),
+      dividerColor:zjColors.dividerStrokeColor ,
       dividerTheme: DividerThemeData(
         color: zjColors.dividerStrokeColor,
         thickness: ZjComponentsUnits.dividerThickness,
