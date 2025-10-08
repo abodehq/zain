@@ -10,16 +10,16 @@ class ZjInputTheme {
     return InputDecorationTheme(
       filled: true,
       //fillColor: Colors.red,
-      //fillColor: ZjColors.secondary2, // background
-      fillColor: WidgetStateColor.resolveWith((states) {
-        if (states.contains(WidgetState.focused)) {
-          return zjColors.inputFocusBackgroundColor; // focused background
-        }
-        if (states.contains(WidgetState.disabled)) {
-          return zjColors.inputDisableBackgroundColor; // disabled background
-        }
-        return zjColors.inputPrimaryBackgroundColor; // default background
-      }),
+      //fillColor:Colors.white,// zjColors.inputPrimaryBackgroundColor, // background
+      // fillColor: WidgetStateColor.resolveWith((states) {
+      //   if (states.contains(WidgetState.focused)) {
+      //     return zjColors.inputFocusBackgroundColor; // focused background
+      //   }
+      //   if (states.contains(WidgetState.disabled)) {
+      //     return ZjColors.transparent; // disabled background
+      //   }
+      //   return zjColors.inputPrimaryBackgroundColor; // default background
+      // }),
       contentPadding: const EdgeInsets.symmetric(
         vertical: ZjComponentsUnits.inputVerticalPadding, // padding top/bottom
         horizontal: ZjComponentsUnits.inputHorizontalPadding, // padding left/right
@@ -31,6 +31,9 @@ class ZjInputTheme {
           width: ZjComponentsUnits.inputBorderWidth,
         ),
       ),
+      disabledBorder:OutlineInputBorder(
+       borderSide:  BorderSide(color: zjColors.inputDisableBorderColor, width: ZjComponentsUnits.inputBorderWidth),
+      ) ,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius), // border-radius
         borderSide:  BorderSide(color: zjColors.inputBorderColor, width: ZjComponentsUnits.inputBorderWidth),

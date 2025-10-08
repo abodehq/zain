@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ZjColors {
+  //transparent
+  static const Color transparent = Color(0x00000000);
   // Primary
   static const Color primary = Color(0xFFD12B8A);
   static const Color primary87 = Color(0xDED12B8A);

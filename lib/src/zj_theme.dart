@@ -63,6 +63,8 @@ class ZjTheme {
           dividerTextColor: zjColors.dividerTextColor,
           inputPrimaryBackgroundColor: zjColors.inputPrimaryBackgroundColor,
           inputEmptyBackgroundColor: zjColors.inputEmptyBackgroundColor,
+          inputDisableBackgroundColor: zjColors.inputDisableBackgroundColor,
+          inputFocusBackgroundColor: zjColors.inputFocusBackgroundColor,
           inputStartIconColor: zjColors.inputStartIconColor,
           inputEndIconColor: zjColors.inputEndIconColor,
           buttonPrimaryBackgroundColor: zjColors.buttonPrimaryBackgroundColor,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zain/zain.dart';
 
-
 class ZjInput extends StatefulWidget {
   final String? label;
   final String? hintText;
@@ -68,6 +67,7 @@ class _ZjInputState extends State<ZjInput> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final zjTheme = theme.zjTheme;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,24 +88,29 @@ class _ZjInputState extends State<ZjInput> {
             return ValueListenableBuilder<bool>(
               valueListenable: _hasText,
               builder: (_, hasText, __) {
+                final inputBackgroundColor = !widget.enabled
+                    ? zjTheme.inputDisableBackgroundColor
+                    : isFocused
+                    ? zjTheme.inputFocusBackgroundColor
+                    : (hasText
+                          ? zjTheme.inputPrimaryBackgroundColor
+                          : zjTheme.inputEmptyBackgroundColor);
                 return AnimatedContainer(
                   duration: const Duration(milliseconds: 150),
                   decoration: BoxDecoration(
-                    color: hasText
-                        ? theme.zjTheme.inputPrimaryBackgroundColor
-                        : theme.zjTheme.inputEmptyBackgroundColor,
+                    color: ZjColors.white,
                     borderRadius: BorderRadius.circular(
                       ZjComponentsUnits.inputBorderRadius,
                     ),
                     boxShadow: isFocused
                         ? [
-                      BoxShadow(
-                        color: ZjColors.secondary12,
-                        blurRadius: 0,
-                        spreadRadius: 4,
-                        offset: Offset.zero,
-                      ),
-                    ]
+                            BoxShadow(
+                              color: ZjColors.secondary12,
+                              blurRadius: 0,
+                              spreadRadius: 4,
+                              offset: Offset.zero,
+                            ),
+                          ]
                         : [],
                   ),
                   child: TextFormField(
@@ -118,35 +123,38 @@ class _ZjInputState extends State<ZjInput> {
                     inputFormatters: widget.inputFormatters,
                     enabled: widget.enabled,
                     decoration: InputDecoration(
+                      fillColor: inputBackgroundColor,
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
                           ? Padding(
-                        padding: const EdgeInsetsDirectional.only(
-                          start: ZjComponentsUnits.inputIconHorizontalPadding,
-                          top: 2,
-                        ),
-                        child: Icon(
-                          widget.startIcon,
-                          color: theme.zjTheme.inputStartIconColor,
-                          size: ZjComponentsUnits.inputStartIconSize,
-                        ),
-                      )
+                              padding: const EdgeInsetsDirectional.only(
+                                start: ZjComponentsUnits
+                                    .inputIconHorizontalPadding,
+                                top: 2,
+                              ),
+                              child: Icon(
+                                widget.startIcon,
+                                color: zjTheme.inputStartIconColor,
+                                size: ZjComponentsUnits.inputStartIconSize,
+                              ),
+                            )
                           : null,
                       suffixIcon: widget.endIcon != null
                           ? Padding(
-                        padding: const EdgeInsetsDirectional.only(
-                          end: ZjComponentsUnits.inputIconHorizontalPadding,
-                          top: 2,
-                        ),
-                        child: IconButton(
-                          icon: Icon(
-                            widget.endIcon,
-                            color: theme.zjTheme.inputEndIconColor,
-                            size: ZjComponentsUnits.inputEndIconSize,
-                          ),
-                          onPressed: widget.onEndIconPressed,
-                        ),
-                      )
+                              padding: const EdgeInsetsDirectional.only(
+                                end: ZjComponentsUnits
+                                    .inputIconHorizontalPadding,
+                                top: 2,
+                              ),
+                              child: IconButton(
+                                icon: Icon(
+                                  widget.endIcon,
+                                  color: zjTheme.inputEndIconColor,
+                                  size: ZjComponentsUnits.inputEndIconSize,
+                                ),
+                                onPressed: widget.onEndIconPressed,
+                              ),
+                            )
                           : null,
                       //border: InputBorder.none,
                       //isDense: true,
@@ -163,7 +171,6 @@ class _ZjInputState extends State<ZjInput> {
     );
   }
 }
-
 
 /// Email Input
 class ZjEmailInput extends StatelessWidget {

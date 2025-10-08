@@ -62,7 +62,7 @@ class ZjLightColors implements ZjColorsTheme {
   @override
   Color get inputBorderFocusColor=> ZjColors.secondary54;
   @override
-  Color get inputDisableBorderColor=> ZjColors.primary;
+  Color get inputDisableBorderColor=> ZjColors.black8;
   @override
   Color get inputLabelColor => txtPrimaryBlack;
   @override
