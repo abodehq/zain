@@ -52,6 +52,8 @@ class ZjLightColors implements ZjColorsTheme {
   @override
   Color get inputPrimaryBackgroundColor=> ZjColors.secondary2;
   @override
+  Color get inputEmptyBackgroundColor=> ZjColors.black2;
+  @override
   Color get inputFocusBackgroundColor=> ZjColors.white;
   @override
   Color get inputDisableBackgroundColor=> ZjColors.black8;

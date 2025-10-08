@@ -60,6 +60,8 @@ class ZjTheme {
       extensions: <ThemeExtension<dynamic>>[
         ZjThemeExtension(
           dividerTextColor: zjColors.dividerTextColor,
+          inputPrimaryBackgroundColor: zjColors.inputPrimaryBackgroundColor,
+          inputEmptyBackgroundColor: zjColors.inputEmptyBackgroundColor,
           inputStartIconColor: zjColors.inputStartIconColor,
           inputEndIconColor: zjColors.inputEndIconColor,
           buttonPrimaryBackgroundColor: zjColors.buttonPrimaryBackgroundColor,

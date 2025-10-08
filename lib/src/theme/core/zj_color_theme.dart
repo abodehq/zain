@@ -29,6 +29,7 @@ abstract class ZjColorsTheme {
 
   //Inputs
   Color get inputPrimaryBackgroundColor;
+  Color get inputEmptyBackgroundColor;
   Color get inputFocusBackgroundColor;
   Color get inputDisableBackgroundColor;
   Color get inputBorderColor;

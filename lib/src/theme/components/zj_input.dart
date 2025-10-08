@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zain/zain.dart';
 
-/// Base Input Component with dynamic fill color
-/// Base Input Component with dynamic fill color
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:zain/zain.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:zain/zain.dart';
+
 class ZjInput extends StatefulWidget {
-  final String? label; // 👈 added label
+  final String? label;
   final String? hintText;
   final IconData? startIcon;
   final IconData? endIcon;
@@ -37,29 +42,28 @@ class ZjInput extends StatefulWidget {
 }
 
 class _ZjInputState extends State<ZjInput> {
-  late FocusNode _focusNode;
-  late ValueNotifier<bool> _hasFocus;
-  late ValueNotifier<bool> _hasText;
+  late final FocusNode _focusNode;
+  late final TextEditingController _controller;
+  late final ValueNotifier<bool> _hasFocus;
+  late final ValueNotifier<bool> _hasText;
 
   @override
   void initState() {
     super.initState();
     _focusNode = FocusNode();
     _hasFocus = ValueNotifier(false);
-    _hasText = ValueNotifier(widget.controller?.text.isNotEmpty ?? false);
 
-    _focusNode.addListener(() {
-      _hasFocus.value = _focusNode.hasFocus;
-    });
+    _controller = widget.controller ?? TextEditingController();
+    _hasText = ValueNotifier(_controller.text.isNotEmpty);
 
-    widget.controller?.addListener(() {
-      _hasText.value = widget.controller!.text.isNotEmpty;
-    });
+    _focusNode.addListener(() => _hasFocus.value = _focusNode.hasFocus);
+    _controller.addListener(() => _hasText.value = _controller.text.isNotEmpty);
   }
 
   @override
   void dispose() {
     _focusNode.dispose();
+    if (widget.controller == null) _controller.dispose();
     _hasFocus.dispose();
     _hasText.dispose();
     super.dispose();
@@ -67,112 +71,103 @@ class _ZjInputState extends State<ZjInput> {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<bool>(
-      valueListenable: _hasFocus,
-      builder: (context, isFocused, _) {
-        return ValueListenableBuilder<bool>(
-          valueListenable: _hasText,
-          builder: (context, hasText, _) {
-            final theme = Theme.of(context);
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (widget.label != null) ...[
-                  Text(
-                    widget.label!,
-                    style: TextStyle(
-                      color: theme.inputDecorationTheme.labelStyle?.color,
-                      fontSize: theme.inputDecorationTheme.labelStyle?.fontSize,
-                    ),
-                  ), // 👈 fixed label above
-                  const SizedBox(
-                    height: ZjComponentsUnits.inputTopLabelPadding,
-                  ),
-                ],
-                Container(
+    final theme = Theme.of(context);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (widget.label != null) ...[
+          Text(
+            widget.label!,
+            style: TextStyle(
+              color: theme.inputDecorationTheme.labelStyle?.color,
+              fontSize: theme.inputDecorationTheme.labelStyle?.fontSize,
+            ),
+          ),
+          const SizedBox(height: ZjComponentsUnits.inputTopLabelPadding),
+        ],
+        ValueListenableBuilder<bool>(
+          valueListenable: _hasFocus,
+          builder: (_, isFocused, __) {
+            return ValueListenableBuilder<bool>(
+              valueListenable: _hasText,
+              builder: (_, hasText, __) {
+                return AnimatedContainer(
+                  duration: const Duration(milliseconds: 150),
                   decoration: BoxDecoration(
+                    color: hasText
+                        ? theme.zjTheme.inputPrimaryBackgroundColor
+                        : theme.zjTheme.inputEmptyBackgroundColor,
                     borderRadius: BorderRadius.circular(
                       ZjComponentsUnits.inputBorderRadius,
                     ),
                     boxShadow: isFocused
                         ? [
-                            BoxShadow(
-                              color: ZjColors.secondary12,
-                              blurRadius: 0,
-                              spreadRadius: 4,
-                              offset: Offset.zero,
-                            ),
-                          ]
+                      BoxShadow(
+                        color: ZjColors.secondary12,
+                        blurRadius: 0,
+                        spreadRadius: 4,
+                        offset: Offset.zero,
+                      ),
+                    ]
                         : [],
                   ),
                   child: TextFormField(
+                    controller: _controller,
                     focusNode: _focusNode,
-                    controller: widget.controller,
                     keyboardType: widget.keyboardType,
                     textInputAction: widget.textInputAction,
                     obscureText: widget.obscureText,
                     validator: widget.validator,
                     inputFormatters: widget.inputFormatters,
-                    style: const TextStyle(
-                      // height: 56
-                    ),
+                    style: const TextStyle(),
                     decoration: InputDecoration(
-                      //contentPadding: const EdgeInsets.only(top: 24, bottom: 0, left: 0, right: 0),
-                      //isDense: true, // makes the field more compact
-                      // contentPadding: const EdgeInsets.fromLTRB(12,100,12,50),
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
                           ? Padding(
-                              padding: const EdgeInsetsDirectional.only(
-                                start: ZjComponentsUnits
-                                    .inputIconHorizontalPadding,
-                                top: 0,
-                                end: 0,
-                                bottom: 0,
-                              ),
-                              child: Container(
-                                margin: const EdgeInsets.only(top: 4),
-                                child: Icon(
-                                  color: theme.zjTheme.inputStartIconColor,
-                                  widget.startIcon,
-                                  size: ZjComponentsUnits.inputStartIconSize,
-                                ),
-                              ),
-                            )
+                        padding: const EdgeInsetsDirectional.only(
+                          start: ZjComponentsUnits.inputIconHorizontalPadding,
+                          top: 2,
+                        ),
+                        child: Icon(
+                          widget.startIcon,
+                          color: theme.zjTheme.inputStartIconColor,
+                          size: ZjComponentsUnits.inputStartIconSize,
+                        ),
+                      )
                           : null,
                       suffixIcon: widget.endIcon != null
                           ? Padding(
-                              padding: const EdgeInsetsDirectional.only(
-                                start: 0,
-                                top: 0,
-                                end: ZjComponentsUnits
-                                    .inputIconHorizontalPadding,
-                                bottom: 0,
-                              ),
-                              child: Container(
-                                margin: const EdgeInsets.only(top: 4),
-                                child: IconButton(
-                                  icon: Icon(
-                                    color: theme.zjTheme.inputEndIconColor,
-                                    widget.endIcon,
-                                    size: ZjComponentsUnits.inputEndIconSize,
-                                  ),
-                                  onPressed: widget.onEndIconPressed,
-                                ),
-                              ),
-                            )
+                        padding: const EdgeInsetsDirectional.only(
+                          end: ZjComponentsUnits.inputIconHorizontalPadding,
+                          top: 2,
+                        ),
+                        child: IconButton(
+                          icon: Icon(
+                            widget.endIcon,
+                            color: theme.zjTheme.inputEndIconColor,
+                            size: ZjComponentsUnits.inputEndIconSize,
+                          ),
+                          onPressed: widget.onEndIconPressed,
+                        ),
+                      )
                           : null,
+                      border: InputBorder.none,
+                      isDense: true,
+                      contentPadding:
+                      const EdgeInsets.symmetric(vertical: 12, horizontal: 0),
                     ),
                   ),
-                ),
-              ],
+                );
+              },
             );
           },
-        );
-      },
+        ),
+      ],
     );
   }
 }
+
 
 /// Email Input
 class ZjEmailInput extends StatelessWidget {

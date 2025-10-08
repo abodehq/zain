@@ -54,6 +54,8 @@ class ZjDarkColors implements ZjColorsTheme {
   @override
   Color get inputPrimaryBackgroundColor=> ZjColors.primary;
   @override
+  Color get inputEmptyBackgroundColor=> ZjColors.third;
+  @override
   Color get inputFocusBackgroundColor=> ZjColors.primary;
   @override
   Color get inputDisableBackgroundColor=> ZjColors.primary;

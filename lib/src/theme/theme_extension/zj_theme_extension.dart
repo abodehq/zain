@@ -14,6 +14,8 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
   final Color buttonTextColor;
 
   //input
+  final Color inputPrimaryBackgroundColor;
+  final Color inputEmptyBackgroundColor;
   final Color inputStartIconColor;
   final Color inputEndIconColor;
 
@@ -31,6 +33,8 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
     required this.buttonSecondaryBackgroundColor,
     required this.buttonDisableBackgroundColor,
     required this.buttonTextColor,
+    required this.inputPrimaryBackgroundColor,
+    required this.inputEmptyBackgroundColor,
     required this.inputStartIconColor,
     required this.inputEndIconColor,
     required this.screenWithActionButtonBackgroundColor,
@@ -52,6 +56,8 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
       buttonSecondaryBackgroundColor: buttonSecondaryBackgroundColor ,
       buttonDisableBackgroundColor: buttonDisableBackgroundColor ,
       buttonTextColor: buttonTextColor ,
+      inputPrimaryBackgroundColor: inputPrimaryBackgroundColor ,
+      inputEmptyBackgroundColor: inputEmptyBackgroundColor ,
       inputStartIconColor: inputStartIconColor ,
       inputEndIconColor: inputEndIconColor ,
       screenWithActionButtonBackgroundColor: screenWithActionButtonBackgroundColor ,
@@ -71,6 +77,8 @@ class ZjThemeExtension extends ThemeExtension<ZjThemeExtension> {
       buttonSecondaryBackgroundColor: Color.lerp(buttonSecondaryBackgroundColor, other.buttonSecondaryBackgroundColor, t)!,
       buttonDisableBackgroundColor: Color.lerp(buttonDisableBackgroundColor, other.buttonDisableBackgroundColor, t)!,
       buttonTextColor: Color.lerp(buttonTextColor, other.buttonTextColor, t)!,
+      inputPrimaryBackgroundColor: Color.lerp(inputPrimaryBackgroundColor, other.inputPrimaryBackgroundColor, t)!,
+      inputEmptyBackgroundColor: Color.lerp(inputEmptyBackgroundColor, other.inputEmptyBackgroundColor, t)!,
       inputStartIconColor: Color.lerp(inputStartIconColor, other.inputStartIconColor, t)!,
       inputEndIconColor: Color.lerp(inputEndIconColor, other.inputEndIconColor, t)!,
       screenWithActionButtonBackgroundColor: Color.lerp(screenWithActionButtonBackgroundColor, other.screenWithActionButtonBackgroundColor, t)!,
