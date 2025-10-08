@@ -17,6 +17,8 @@ abstract class ZjColorsTheme {
   Color get txtSecondaryBlack;
   Color get txtPrimaryWhite;
   Color get txtSecondaryWhite;
+  Color get txtSelectionColor;
+  Color get txtCursorColor;
 
 
   // Borders / Dividers

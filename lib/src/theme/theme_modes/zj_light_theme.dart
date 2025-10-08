@@ -33,6 +33,10 @@ class ZjLightColors implements ZjColorsTheme {
   Color get txtPrimaryWhite => ZjColors.white;
   @override
   Color get txtSecondaryWhite => ZjColors.white70;
+  @override
+  Color get txtSelectionColor => ZjColors.secondary24;
+  @override
+  Color get txtCursorColor => ZjColors.secondary;
 
   // Borders / Dividers
   @override

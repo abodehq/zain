@@ -35,6 +35,10 @@ class ZjDarkColors implements ZjColorsTheme {
   Color get txtPrimaryWhite => ZjColors.white;
   @override
   Color get txtSecondaryWhite => ZjColors.white;
+  @override
+  Color get txtSelectionColor => ZjColors.white;
+  @override
+  Color get txtCursorColor => ZjColors.white;
 
   // Borders / Dividers
   @override

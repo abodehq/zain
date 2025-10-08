@@ -31,7 +31,11 @@ class ZjTheme {
         ),
       ),
       textTheme: ZjTextTheme.lightTextTheme,
-
+      textSelectionTheme:  TextSelectionThemeData(
+        cursorColor: zjColors.txtCursorColor,          // The blinking cursor color
+        selectionColor: zjColors.txtSelectionColor, // Highlighted text background color
+        selectionHandleColor: zjColors.txtCursorColor, // Handle color (circle at the end)
+      ),
       inputDecorationTheme: ZjInputTheme.inputTheme(zjColors),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ZjButtonTheme.buttonTheme(zjColors),
