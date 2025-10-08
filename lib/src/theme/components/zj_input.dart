@@ -113,40 +113,52 @@ class _ZjInputState extends State<ZjInput> {
                     obscureText: widget.obscureText,
                     validator: widget.validator,
                     inputFormatters: widget.inputFormatters,
+                    style: const TextStyle(
+                      // height: 56
+                    ),
                     decoration: InputDecoration(
+                      //contentPadding: const EdgeInsets.only(top: 24, bottom: 0, left: 0, right: 0),
                       //isDense: true, // makes the field more compact
                       // contentPadding: const EdgeInsets.fromLTRB(12,100,12,50),
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
                           ? Padding(
-                              padding: const EdgeInsets.fromLTRB(
-                                ZjComponentsUnits.inputIconHorizontalPadding,
-                                0,
-                                0,
-                                0,
+                              padding: const EdgeInsetsDirectional.only(
+                                start: ZjComponentsUnits
+                                    .inputIconHorizontalPadding,
+                                top: 0,
+                                end: 0,
+                                bottom: 0,
                               ),
-                              child: Icon(
-                                color: theme.zjTheme.inputStartIconColor,
-                                widget.startIcon,
-                                size: ZjComponentsUnits.inputStartIconSize,
+                              child: Container(
+                                margin: const EdgeInsets.only(top: 4),
+                                child: Icon(
+                                  color: theme.zjTheme.inputStartIconColor,
+                                  widget.startIcon,
+                                  size: ZjComponentsUnits.inputStartIconSize,
+                                ),
                               ),
                             )
                           : null,
                       suffixIcon: widget.endIcon != null
                           ? Padding(
-                              padding: const EdgeInsets.fromLTRB(
-                                0,
-                                0,
-                                ZjComponentsUnits.inputIconHorizontalPadding,
-                                0,
+                              padding: const EdgeInsetsDirectional.only(
+                                start: 0,
+                                top: 0,
+                                end: ZjComponentsUnits
+                                    .inputIconHorizontalPadding,
+                                bottom: 0,
                               ),
-                              child: IconButton(
-                                icon: Icon(
-                                  color: theme.zjTheme.inputEndIconColor,
-                                  widget.endIcon,
-                                  size: ZjComponentsUnits.inputEndIconSize,
+                              child: Container(
+                                margin: const EdgeInsets.only(top: 4),
+                                child: IconButton(
+                                  icon: Icon(
+                                    color: theme.zjTheme.inputEndIconColor,
+                                    widget.endIcon,
+                                    size: ZjComponentsUnits.inputEndIconSize,
+                                  ),
+                                  onPressed: widget.onEndIconPressed,
                                 ),
-                                onPressed: widget.onEndIconPressed,
                               ),
                             )
                           : null,
