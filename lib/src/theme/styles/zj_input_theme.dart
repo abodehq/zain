@@ -21,8 +21,8 @@ class ZjInputTheme {
         return zjColors.inputPrimaryBackgroundColor; // default background
       }),
       contentPadding: const EdgeInsets.symmetric(
-        vertical: ZjUnits.unit10, // padding top/bottom
-        horizontal: ZjUnits.unit12, // padding left/right
+        vertical: ZjComponentsUnits.inputVerticalPadding, // padding top/bottom
+        horizontal: ZjComponentsUnits.inputHorizontalPadding, // padding left/right
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius), // border-radius
