@@ -85,11 +85,15 @@ class _ZjInputState extends State<ZjInput> {
                       fontSize: theme.inputDecorationTheme.labelStyle?.fontSize,
                     ),
                   ), // 👈 fixed label above
-                  const SizedBox(height: ZjComponentsUnits.inputTopLabelPadding),
+                  const SizedBox(
+                    height: ZjComponentsUnits.inputTopLabelPadding,
+                  ),
                 ],
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius),
+                    borderRadius: BorderRadius.circular(
+                      ZjComponentsUnits.inputBorderRadius,
+                    ),
                     boxShadow: isFocused
                         ? [
                             BoxShadow(
@@ -110,14 +114,40 @@ class _ZjInputState extends State<ZjInput> {
                     validator: widget.validator,
                     inputFormatters: widget.inputFormatters,
                     decoration: InputDecoration(
+                      //isDense: true, // makes the field more compact
+                      // contentPadding: const EdgeInsets.fromLTRB(12,100,12,50),
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
-                          ? Icon(color: theme.zjTheme.inputStartIconColor, widget.startIcon, size: ZjComponentsUnits.inputStartIconSize)
+                          ? Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                ZjComponentsUnits.inputIconHorizontalPadding,
+                                0,
+                                0,
+                                0,
+                              ),
+                              child: Icon(
+                                color: theme.zjTheme.inputStartIconColor,
+                                widget.startIcon,
+                                size: ZjComponentsUnits.inputStartIconSize,
+                              ),
+                            )
                           : null,
                       suffixIcon: widget.endIcon != null
-                          ? IconButton(
-                              icon: Icon(color: theme.zjTheme.inputEndIconColor,widget.endIcon, size: ZjComponentsUnits.inputEndIconSize),
-                              onPressed: widget.onEndIconPressed,
+                          ? Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                0,
+                                0,
+                                ZjComponentsUnits.inputIconHorizontalPadding,
+                                0,
+                              ),
+                              child: IconButton(
+                                icon: Icon(
+                                  color: theme.zjTheme.inputEndIconColor,
+                                  widget.endIcon,
+                                  size: ZjComponentsUnits.inputEndIconSize,
+                                ),
+                                onPressed: widget.onEndIconPressed,
+                              ),
                             )
                           : null,
                     ),
@@ -143,7 +173,7 @@ class ZjEmailInput extends StatelessWidget {
     return ZjInput(
       controller: controller,
       hintText: "Email",
-      startIcon: Icons.email,
+      startIcon: ZjIcons.email,
       keyboardType: TextInputType.emailAddress,
       textInputAction: TextInputAction.next,
       validator: ZjValidator.email,
