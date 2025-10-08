@@ -61,6 +61,10 @@ class ZjLightColors implements ZjColorsTheme {
   Color get inputLabelColor => txtPrimaryBlack;
   @override
   Color get inputHintColor => ZjColors.black24;
+  @override
+  Color get inputStartIconColor=> ZjColors.black54;
+  @override
+  Color get inputEndIconColor=> ZjColors.black54;
 
   // Buttons
   @override

@@ -13,6 +13,7 @@ class ZjComponentsUnits {
   static const double inputBorderRadius = ZjUnits.rmd;
   static const double inputStartIconSize = ZjUnits.unit24;
   static const double inputEndIconSize = ZjUnits.unit18;
+  static const double inputTopLabelPadding = ZjUnits.unit6;
 
   //divider Width
   static const double dividerThickness = 1;

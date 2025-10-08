@@ -85,7 +85,7 @@ class _ZjInputState extends State<ZjInput> {
                       fontSize: theme.inputDecorationTheme.labelStyle?.fontSize,
                     ),
                   ), // 👈 fixed label above
-                  const SizedBox(height: 6),
+                  const SizedBox(height: ZjComponentsUnits.inputTopLabelPadding),
                 ],
                 Container(
                   decoration: BoxDecoration(
@@ -112,11 +112,11 @@ class _ZjInputState extends State<ZjInput> {
                     decoration: InputDecoration(
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
-                          ? Icon(widget.startIcon, size: ZjComponentsUnits.inputStartIconSize)
+                          ? Icon(color: theme.zjTheme.inputStartIconColor, widget.startIcon, size: ZjComponentsUnits.inputStartIconSize)
                           : null,
                       suffixIcon: widget.endIcon != null
                           ? IconButton(
-                              icon: Icon(widget.endIcon, size: ZjComponentsUnits.inputEndIconSize),
+                              icon: Icon(color: theme.zjTheme.inputEndIconColor,widget.endIcon, size: ZjComponentsUnits.inputEndIconSize),
                               onPressed: widget.onEndIconPressed,
                             )
                           : null,
