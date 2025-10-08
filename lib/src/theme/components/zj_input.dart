@@ -10,6 +10,7 @@ class ZjInput extends StatefulWidget {
   final IconData? endIcon;
   final VoidCallback? onEndIconPressed;
   final bool obscureText;
+  final bool enabled;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
@@ -24,6 +25,7 @@ class ZjInput extends StatefulWidget {
     this.endIcon,
     this.onEndIconPressed,
     this.obscureText = false,
+    this.enabled = true,
     this.textInputAction = TextInputAction.next,
     this.controller,
     this.keyboardType,
@@ -114,7 +116,7 @@ class _ZjInputState extends State<ZjInput> {
                     obscureText: widget.obscureText,
                     validator: widget.validator,
                     inputFormatters: widget.inputFormatters,
-                    style: const TextStyle(),
+                    enabled: widget.enabled,
                     decoration: InputDecoration(
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
@@ -146,10 +148,10 @@ class _ZjInputState extends State<ZjInput> {
                         ),
                       )
                           : null,
-                      border: InputBorder.none,
-                      isDense: true,
-                      contentPadding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 0),
+                      //border: InputBorder.none,
+                      //isDense: true,
+                      // contentPadding:
+                      // const EdgeInsets.symmetric(vertical: 12, horizontal: 0),
                     ),
                   ),
                 );
