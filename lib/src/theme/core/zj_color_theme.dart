@@ -33,6 +33,7 @@ abstract class ZjColorsTheme {
   Color get inputBorderFocusColor;
   Color get inputDisableBorderColor;
   Color get inputLabelColor;
+  Color get inputHintColor;
 
   // Buttons
   Color get buttonPrimaryBackgroundColor;

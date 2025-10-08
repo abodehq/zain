@@ -25,25 +25,26 @@ class ZjInputTheme {
         horizontal: ZjUnits.unit12, // padding left/right
       ),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(ZjUnits.rmd), // border-radius
+        borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius), // border-radius
         borderSide:  BorderSide(
           color: zjColors.inputBorderColor, // border color
-          width: 1,
+          width: ZjComponentsUnits.inputBorderWidth,
         ),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide:  BorderSide(color: zjColors.inputBorderColor, width: 1),
+        borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius), // border-radius
+        borderSide:  BorderSide(color: zjColors.inputBorderColor, width: ZjComponentsUnits.inputBorderWidth),
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
           color: zjColors.inputBorderFocusColor, // change border on focus
         ),
       ),
-      labelStyle: TextStyle(color: zjColors.inputLabelColor,fontSize: 14),
-      hintStyle: const TextStyle(
-        fontSize: 14,
+      labelStyle: TextStyle(color: zjColors.inputLabelColor,fontSize: ZjComponentsUnits.inputFontSize),
+      hintStyle:  TextStyle(
+        fontSize: ZjComponentsUnits.inputHintFontSize,
         fontWeight: FontWeight.w400,
-        color: ZjColors.black, // lighter hint
+        color: zjColors.inputHintColor, // lighter hint
       ),
     );
   }

@@ -89,7 +89,7 @@ class _ZjInputState extends State<ZjInput> {
                 ],
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(ZjComponentsUnits.inputBorderRadius),
                     boxShadow: isFocused
                         ? [
                             BoxShadow(
@@ -112,11 +112,11 @@ class _ZjInputState extends State<ZjInput> {
                     decoration: InputDecoration(
                       hintText: widget.hintText ?? "Enter something",
                       prefixIcon: widget.startIcon != null
-                          ? Icon(widget.startIcon, size: 24.0)
+                          ? Icon(widget.startIcon, size: ZjComponentsUnits.inputStartIconSize)
                           : null,
                       suffixIcon: widget.endIcon != null
                           ? IconButton(
-                              icon: Icon(widget.endIcon, size: 18.0),
+                              icon: Icon(widget.endIcon, size: ZjComponentsUnits.inputEndIconSize),
                               onPressed: widget.onEndIconPressed,
                             )
                           : null,

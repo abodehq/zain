@@ -6,6 +6,14 @@ class ZjComponentsUnits {
   static const double screenWithActionButtonContainerPadding = ZjUnits.unit20;
   static const double screenWithActionButtonContainerGap = ZjUnits.unit20;
 
+  //input Properties
+  static const double inputFontSize = ZjUnits.unit14;
+  static const double inputHintFontSize = ZjUnits.unit14;
+  static const double inputBorderWidth = 1;
+  static const double inputBorderRadius = ZjUnits.rmd;
+  static const double inputStartIconSize = ZjUnits.unit24;
+  static const double inputEndIconSize = ZjUnits.unit18;
+
   //divider Width
   static const double dividerThickness = 1;
 

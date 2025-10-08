@@ -61,6 +61,8 @@ class ZjDarkColors implements ZjColorsTheme {
   Color get inputDisableBorderColor=> ZjColors.primary;
   @override
   Color get inputLabelColor => ZjColors.white;
+  @override
+  Color get inputHintColor => ZjColors.black24;
   // Buttons
   @override
   Color get buttonPrimaryBackgroundColor => ZjColors.primary;
