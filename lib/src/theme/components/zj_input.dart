@@ -68,7 +68,7 @@ class _ZjInputState extends State<ZjInput> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final zjTheme = theme.zjTheme;
-
+    print(this.hashCode);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
