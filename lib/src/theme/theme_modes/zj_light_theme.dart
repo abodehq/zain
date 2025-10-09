@@ -20,6 +20,8 @@ class ZjLightColors implements ZjColorsTheme {
 
   // Text
   @override
+  Color get txtDefaultColor => ZjColors.black87;
+  @override
   Color get txtBrandPrimary => ZjColors.primary;
   @override
   Color get txtBrandSecondary => ZjColors.secondary;
@@ -50,27 +52,27 @@ class ZjLightColors implements ZjColorsTheme {
 
   // Inputs
   @override
-  Color get inputPrimaryBackgroundColor=> ZjColors.secondary2;
+  Color get inputPrimaryBackgroundColor => ZjColors.secondary2;
   @override
-  Color get inputEmptyBackgroundColor=> ZjColors.black2;
+  Color get inputEmptyBackgroundColor => ZjColors.black2;
   @override
-  Color get inputFocusBackgroundColor=> ZjColors.white;
+  Color get inputFocusBackgroundColor => ZjColors.white;
   @override
-  Color get inputDisableBackgroundColor=> ZjColors.black8;
+  Color get inputDisableBackgroundColor => ZjColors.black8;
   @override
-  Color get inputBorderColor=> ZjColors.black8;
+  Color get inputBorderColor => ZjColors.black8;
   @override
-  Color get inputBorderFocusColor=> ZjColors.secondary54;
+  Color get inputBorderFocusColor => ZjColors.secondary54;
   @override
-  Color get inputDisableBorderColor=> ZjColors.black8;
+  Color get inputDisableBorderColor => ZjColors.black8;
   @override
   Color get inputLabelColor => txtPrimaryBlack;
   @override
   Color get inputHintColor => ZjColors.black24;
   @override
-  Color get inputStartIconColor=> ZjColors.black54;
+  Color get inputStartIconColor => ZjColors.black54;
   @override
-  Color get inputEndIconColor=> ZjColors.black54;
+  Color get inputEndIconColor => ZjColors.black54;
 
   // Buttons
   @override

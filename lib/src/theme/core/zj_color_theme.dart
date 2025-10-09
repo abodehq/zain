@@ -10,6 +10,7 @@ abstract class ZjColorsTheme {
   Color get appBarIconColor;
 
   // Text
+  Color get txtDefaultColor;
   Color get txtBrandPrimary;
   Color get txtBrandSecondary;
   Color get txtBrandThird;
@@ -19,7 +20,6 @@ abstract class ZjColorsTheme {
   Color get txtSecondaryWhite;
   Color get txtSelectionColor;
   Color get txtCursorColor;
-
 
   // Borders / Dividers
   Color get borderPrimary;

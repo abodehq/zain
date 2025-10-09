@@ -6,7 +6,8 @@ class ZjTheme {
   static ThemeData getTheme(ZjColorsTheme zjColors) {
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.light, // you can also pass brightness as parameter if needed
+      brightness: Brightness
+          .light, // you can also pass brightness as parameter if needed
       primaryColor: zjColors.appPrimaryColor,
       scaffoldBackgroundColor: zjColors.screenPrimaryBackground,
       fontFamily: "zain",
@@ -26,15 +27,15 @@ class ZjTheme {
         ),
         titleSpacing: 0,
         leadingWidth: 48,
-        iconTheme: IconThemeData(
-          color: zjColors.appBarIconColor,
-        ),
+        iconTheme: IconThemeData(color: zjColors.appBarIconColor),
       ),
-      textTheme: ZjTextTheme.lightTextTheme,
-      textSelectionTheme:  TextSelectionThemeData(
-        cursorColor: zjColors.txtCursorColor,          // The blinking cursor color
-        selectionColor: zjColors.txtSelectionColor, // Highlighted text background color
-        selectionHandleColor: zjColors.txtCursorColor, // Handle color (circle at the end)
+      textTheme: ZjTextTheme.textTheme(zjColors),
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: zjColors.txtCursorColor, // The blinking cursor color
+        selectionColor:
+            zjColors.txtSelectionColor, // Highlighted text background color
+        selectionHandleColor:
+            zjColors.txtCursorColor, // Handle color (circle at the end)
       ),
       inputDecorationTheme: ZjInputTheme.inputTheme(zjColors),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -48,7 +49,7 @@ class ZjTheme {
         iconColor: Colors.blue,
         textColor: Colors.black,
       ),
-      dividerColor:zjColors.dividerStrokeColor ,
+      dividerColor: zjColors.dividerStrokeColor,
       dividerTheme: DividerThemeData(
         color: zjColors.dividerStrokeColor,
         thickness: ZjComponentsUnits.dividerThickness,
@@ -68,12 +69,16 @@ class ZjTheme {
           inputStartIconColor: zjColors.inputStartIconColor,
           inputEndIconColor: zjColors.inputEndIconColor,
           buttonPrimaryBackgroundColor: zjColors.buttonPrimaryBackgroundColor,
-          buttonSecondaryBackgroundColor: zjColors.buttonSecondaryBackgroundColor,
+          buttonSecondaryBackgroundColor:
+              zjColors.buttonSecondaryBackgroundColor,
           buttonDisableBackgroundColor: zjColors.buttonDisableBackgroundColor,
           buttonTextColor: zjColors.buttonTextColor,
-          screenWithActionButtonBackgroundColor: zjColors.screenWithActionButtonBackgroundColor,
-          screenWithActionButtonBorderColor: zjColors.screenWithActionButtonBorderColor,
-          screenWithActionButtonContainerColor: zjColors.screenWithActionButtonContainerColor,
+          screenWithActionButtonBackgroundColor:
+              zjColors.screenWithActionButtonBackgroundColor,
+          screenWithActionButtonBorderColor:
+              zjColors.screenWithActionButtonBorderColor,
+          screenWithActionButtonContainerColor:
+              zjColors.screenWithActionButtonContainerColor,
           zigzagTheme: ZjZigzagTheme(
             zigzagHeight: ZjComponentsUnits.zigzagHeight,
             zigzagWidth: ZjComponentsUnits.zigzagWidth,

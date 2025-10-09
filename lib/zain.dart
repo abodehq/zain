@@ -4,6 +4,7 @@ export 'src/zj_theme.dart';
 export 'src/theme/core/zj_colors.dart';
 export 'src/theme/core/zj_color_theme.dart';
 export 'src/theme/core/zj_units.dart';
+export 'src/theme/core/zj_text_variables.dart';
 export 'src/theme/core/zj_components_units.dart';
 export 'src/theme/validators/zj_validators.dart';
 
@@ -43,5 +44,3 @@ export 'src/theme/styles/zj_switch_theme.dart';
 export 'src/layout/screens/zj_screen_with_action_button.dart';
 //app bars
 export 'src/layout/app_bars/zj_app_bar_with_actions.dart';
-
-

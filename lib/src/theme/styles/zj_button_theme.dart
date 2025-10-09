@@ -15,16 +15,16 @@ class ZjButtonTheme {
       // background color depending on state
       backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
         return states.contains(WidgetState.disabled)
-        ? zjColors.buttonDisableBackgroundColor
-        : zjColors.buttonPrimaryBackgroundColor;
+            ? zjColors.buttonDisableBackgroundColor
+            : zjColors.buttonPrimaryBackgroundColor;
         return ZjColors.primary;
       }),
 
       // foreground/text color depending on state
       foregroundColor: WidgetStateProperty.resolveWith<Color>((states) {
         return states.contains(WidgetState.disabled)
-        ? zjColors.buttonDisableText
-        : zjColors.buttonTextColor;
+            ? zjColors.buttonDisableText
+            : zjColors.buttonTextColor;
         //return ZjColors.primary;
       }),
 
@@ -45,10 +45,10 @@ class ZjButtonTheme {
 
       // text style depending on state
       textStyle: WidgetStateProperty.resolveWith<TextStyle>((states) {
-        return ZjTextVars.txtBold14.copyWith(
+        return ZjTextStyles.txtBold14.copyWith(
           color: states.contains(WidgetState.disabled)
-          ? zjColors.buttonDisableText
-          : zjColors.buttonTextColor,
+              ? zjColors.buttonDisableText
+              : zjColors.buttonTextColor,
         );
       }),
     );

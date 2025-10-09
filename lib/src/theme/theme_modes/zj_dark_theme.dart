@@ -6,7 +6,6 @@ class ZjDarkColors implements ZjColorsTheme {
   ZjDarkColors._();
   static final ZjDarkColors instance = ZjDarkColors._();
 
-
   @override
   Color get appPrimaryColor => ZjColors.primary;
   @override
@@ -21,6 +20,8 @@ class ZjDarkColors implements ZjColorsTheme {
   Color get appBarIconColor => ZjColors.black;
 
   // Text
+  @override
+  Color get txtDefaultColor => ZjColors.black87;
   @override
   Color get txtBrandPrimary => ZjColors.secondary;
   @override
@@ -52,27 +53,27 @@ class ZjDarkColors implements ZjColorsTheme {
 
   // Inputs
   @override
-  Color get inputPrimaryBackgroundColor=> ZjColors.primary;
+  Color get inputPrimaryBackgroundColor => ZjColors.primary;
   @override
-  Color get inputEmptyBackgroundColor=> ZjColors.third;
+  Color get inputEmptyBackgroundColor => ZjColors.third;
   @override
-  Color get inputFocusBackgroundColor=> ZjColors.primary;
+  Color get inputFocusBackgroundColor => ZjColors.primary;
   @override
-  Color get inputDisableBackgroundColor=> ZjColors.primary;
+  Color get inputDisableBackgroundColor => ZjColors.primary;
   @override
-  Color get inputBorderColor=> ZjColors.primary;
+  Color get inputBorderColor => ZjColors.primary;
   @override
-  Color get inputBorderFocusColor=> ZjColors.primary;
+  Color get inputBorderFocusColor => ZjColors.primary;
   @override
-  Color get inputDisableBorderColor=> ZjColors.primary;
+  Color get inputDisableBorderColor => ZjColors.primary;
   @override
   Color get inputLabelColor => ZjColors.white;
   @override
   Color get inputHintColor => ZjColors.black24;
   @override
-  Color get inputStartIconColor=> ZjColors.black54;
+  Color get inputStartIconColor => ZjColors.black54;
   @override
-  Color get inputEndIconColor=> ZjColors.black54;
+  Color get inputEndIconColor => ZjColors.black54;
   // Buttons
   @override
   Color get buttonPrimaryBackgroundColor => ZjColors.primary;
