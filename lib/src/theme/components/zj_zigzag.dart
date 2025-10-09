@@ -56,7 +56,7 @@ class _ZigZagFillTopPainter extends CustomPainter {
   final double strokeWidth;
   final Color? bottomFillColor;
 
-  _ZigZagFillTopPainter({
+ const _ZigZagFillTopPainter({
     required this.zigzagHeight,
     required this.zigzagWidth,
     required this.fillColor,
