@@ -81,6 +81,7 @@ class ZjTextVars {
 
 /// ========= Semantic Styles =========
 class ZjTextStyles {
+  static const TextStyle defaultTextStyle = ZjTextVars.txt16;
   static const TextStyle h1 = TextStyle(
     fontSize: 36,
     fontWeight: FontWeight.bold,
@@ -118,6 +119,37 @@ class ZjTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.w400,
   );
+}
+
+class ZjText extends StatelessWidget {
+  final String? text;
+  final TextStyle? style;
+  final TextAlign? textAlign;
+  final int? maxLines;
+  final TextOverflow? overflow;
+
+  const ZjText(
+    this.text, {
+    super.key,
+    this.style,
+    this.textAlign,
+    this.maxLines,
+    this.overflow,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final textStyle = style == null
+        ? ZjTextStyles.defaultTextStyle
+        : ZjTextStyles.defaultTextStyle.merge(style);
+    return Text(
+      text ?? '',
+      style: textStyle,
+      textAlign: textAlign,
+      maxLines: maxLines,
+      overflow: overflow,
+    );
+  }
 }
 
 /// ========= Components extending Text =========
